@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ices:Configuration xmlns:ices="http://www.icecast.org/projects/ices">
+  <Playlist>
+    <File>/share/Web/.config/icestation/icecast.playlist.txt</File>
+    <Randomize>0</Randomize>
+    <Type>builtin</Type>
+    <Module>ices</Module>
+  </Playlist>
+
+  <Execution>
+    <Background>1</Background>
+    <Verbose>0</Verbose>
+    <BaseDirectory>/usr/bin/icestation/var/log/ices0</BaseDirectory>
+  </Execution>
+
+  <Stream>
+    <Server>
+      <Hostname>127.0.0.1</Hostname>
+      <Port>8000</Port>
+      <Password>geheim1505</Password>
+      <Protocol>http</Protocol>
+    </Server>
+
+    <Mountpoint>/stream</Mountpoint>
+
+    <Name>Extrem-HoT - IceStation</Name>
+    <Genre>Mixed styles</Genre>
+    <Description>This Is the Noise We Make</Description>
+    <URL>speedy1505.homeip.net</URL>
+
+    <Public>0</Public>
+
+    <Bitrate>128</Bitrate>
+    <Reencode>0</Reencode>
+    <Channels>2</Channels>
+  </Stream>
+</ices:Configuration>

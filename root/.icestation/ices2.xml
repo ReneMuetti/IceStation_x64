@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ices>
+    <!-- run in background -->
+    <background>0</background>
+    <!-- where logs, etc go. -->
+    <logpath>/share/CACHEDEV1_DATA/.qpkg/icestation/var/log/ices2</logpath>
+    <logfile>ices.log</logfile>
+    <!-- 1=error,2=warn,3=info,4=debug -->
+    <loglevel>2</loglevel>
+    <!-- set this to 1 to log to the console instead of to the file above -->
+    <consolelog>0</consolelog>
+
+    <!-- optional filename to write process id to -->
+    <pidfile>/share/CACHEDEV1_DATA/.qpkg/icestation/var/log/ices2/ices.pid</pidfile>
+
+    <stream>
+        <!-- metadata used for stream listing (not currently used) -->
+        <metadata>
+            <name>Extrem-HoT - IceStation</name>
+            <genre>Mixed styles</genre>
+            <description>This Is the Noise We Make</description>
+        </metadata>
+
+        <input>
+            <module>playlist</module>
+            <param name="type">basic</param>
+            <param name="file">/share/Web/.config/icestation/icecast.playlist.txt</param>
+            <!-- random play -->
+            <param name="random">1</param>
+            <!-- if the playlist get updated that start at the beginning -->
+            <param name="restart-after-reread">1</param>
+            <!-- if set to 1 , plays once through, then exits. -->
+            <param name="once">0</param>
+        </input>
+
+        <instance>
+            <hostname>127.0.0.1</hostname>
+            <port>8000</port>
+            <password>geheim1505</password>
+            <mount>/stream</mount>
+
+            <reconnectdelay>2</reconnectdelay>
+            <reconnectattempts>5</reconnectattempts>
+
+            <maxqueuelength>80</maxqueuelength>
+
+            <encode>
+                <nominal-bitrate>128000</nominal-bitrate> <!-- bps. e.g. 64000 for 64 kbps -->
+                <samplerate>44100</samplerate>
+                <channels>2</channels>
+            </encode>
+        </instance>
+
+	</stream>
+</ices>
