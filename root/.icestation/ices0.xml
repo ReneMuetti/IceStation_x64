@@ -10,23 +10,23 @@
   <Execution>
     <Background>1</Background>
     <Verbose>0</Verbose>
-    <BaseDirectory>/usr/bin/icestation/var/log/ices0</BaseDirectory>
+    <BaseDirectory>/share/CACHEDEV1_DATA/.qpkg/icestation/var/log/ices0</BaseDirectory>
   </Execution>
 
   <Stream>
     <Server>
       <Hostname>127.0.0.1</Hostname>
       <Port>8000</Port>
-      <Password>geheim1505</Password>
+      <Password>********</Password>
       <Protocol>http</Protocol>
     </Server>
 
     <Mountpoint>/stream</Mountpoint>
 
-    <Name>Extrem-HoT - IceStation</Name>
+    <Name>IceStation</Name>
     <Genre>Mixed styles</Genre>
     <Description>This Is the Noise We Make</Description>
-    <URL>speedy1505.homeip.net</URL>
+    <URL>host.ext</URL>
 
     <Public>0</Public>
 

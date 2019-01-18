@@ -16,7 +16,7 @@
     <stream>
         <!-- metadata used for stream listing (not currently used) -->
         <metadata>
-            <name>Extrem-HoT - IceStation</name>
+            <name>IceStation</name>
             <genre>Mixed styles</genre>
             <description>This Is the Noise We Make</description>
         </metadata>
@@ -36,7 +36,7 @@
         <instance>
             <hostname>127.0.0.1</hostname>
             <port>8000</port>
-            <password>geheim1505</password>
+            <password>********</password>
             <mount>/stream</mount>
 
             <reconnectdelay>2</reconnectdelay>

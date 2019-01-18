@@ -12,28 +12,31 @@
     </limits>
 
     <authentication>
-        <source-password>geheim1505</source-password>
-        <relay-password>geheim1505</relay-password>
+        <source-password>********</source-password>
+        <relay-password>********</relay-password>
 
         <admin-user>admin</admin-user>
-        <admin-password>geheim1505</admin-password>
+        <admin-password>********</admin-password>
     </authentication>
 
-    <hostname>localhost</hostname>
+    <hostname>127.0.0.1</hostname>
+    <location>home</location>
+    <admin>icemaster@private.local</admin>
+    <server-id>icecast 2.4.3-3</server-id>
 
     <listen-socket>
         <port>8000</port>
         <shoutcast-mount>/stream</shoutcast-mount>
     </listen-socket>
-    
+
     <fileserve>1</fileserve>
 
     <paths>
         <basedir>/</basedir>
-        <logdir>/usr/bin/icestation/var/log/icecast</logdir>
-        <webroot>/usr/bin/icestation/share/icecast/web</webroot>
-        <adminroot>/usr/bin/icestation/share/icecast/admin</adminroot>
-        <pidfile>/usr/bin/icestation/share/icecast/icecast.pid</pidfile>
+        <logdir>/share/CACHEDEV1_DATA/.qpkg/icestation/var/log/icecast</logdir>
+        <webroot>/share/CACHEDEV1_DATA/.qpkg/icestation/share/icecast/web</webroot>
+        <adminroot>/share/CACHEDEV1_DATA/.qpkg/icestation/share/icecast/admin</adminroot>
+        <pidfile>/share/CACHEDEV1_DATA/.qpkg/icestation/var/log/icecast/icecast.pid</pidfile>
 
         <alias source="/" dest="/status.xsl"/>
     </paths>

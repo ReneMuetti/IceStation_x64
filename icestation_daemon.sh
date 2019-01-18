@@ -42,7 +42,7 @@ if [ -f "${SIGNAL}" ]; then
 
     # execute
     if [ -f "${SEXEC}" ]; then
-	${SEXEC} ${SIGNALMSG}
+	    ${SEXEC} ${SIGNALMSG}
     fi
 
     echo "${SIGNALMSG}" > ${SIGNALRET}
