@@ -11,7 +11,8 @@ require_once './global.php';
 // #######################################################################
 // ######################## START MAIN SCRIPT ############################
 // #######################################################################
-echo '<pre>';
-var_dump($site);
-echo '</pre>';
+$renderer = new Templater();
+$renderer -> loadTemplate('page.htm');
+    $renderer -> renderDebugOutput($site);
+print_output($renderer -> renderTemplate());
 ?>

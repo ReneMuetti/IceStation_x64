@@ -11,12 +11,16 @@ define ('INC_PATH'  , $config['base_path'] . '/include' );
 define ('CONF_PATH' , $config['base_path'] . '/include/configs' );
 define ('CLASS_PATH', $config['base_path'] . '/include/classes' );
 define ('FUNC_PATH' , $config['base_path'] . '/include/functions' );
+define ('BASE_URL'  , $config['protocol'] . '://' . $config['host'] . dirname($config['script']) );
+define ('CHARSET'   , ini_get('default_charset'));
+define ('SAPI_NAME' , php_sapi_name() );
 
 /**
  * complete Configuration
  */
-$config['baseurl']   = $config['protocol'] . '://' . $config['host'] . $config['script'];
-$config['templates'] = $config['base_path'] . '/template';
+$config['charset']   = CHARSET;
+$config['baseurl']   = BASE_URL;
+$config['templates'] = $config['base_path'] . '/skin/template';
 
 $config['inc_path']   = INC_PATH;
 $config['conf_path']  = CONF_PATH;

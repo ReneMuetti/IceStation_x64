@@ -47,4 +47,35 @@ function ini_size_to_bytes($value)
     return $retval;
 }
 
+// #############################################################################
+/**
+* Finishes off the current page (using templates), prints it out to the browser
+* and halts execution
+*
+* @param	string	The HTML of the page to be printed
+* @param	boolean	Send the content length header?
+*/
+function print_output($vartext)
+{
+    header("Content-Type: text/html; charset=" . CHARSET);
+    header("Expires: : Mon, 1 Jan 2010 00:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+    header("Pragma: No-cache");
+    header("Content-Length: " . strlen($vartext));
+
+	// make sure headers sent returns correctly
+	if (ob_get_level() AND ob_get_length()) {
+	    ob_end_flush();
+    }
+
+	// show regular page
+	echo $vartext;
+
+	// broken if zlib.output_compression is on with Apache 2
+	if (SAPI_NAME != 'apache2handler' AND SAPI_NAME != 'apache2filter') {
+        flush();
+    }
+    exit;
+}
 ?>
