@@ -1,0 +1,10 @@
+/* Base-Definitions */
+pre {
+    overflow: scroll;
+    padding: 3px;
+    border: 1px solid #000000;
+    display: block;
+    min-height: 150px;
+    max-height: 500px;
+    margin: 20px 0;
+}

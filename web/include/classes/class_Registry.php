@@ -27,6 +27,22 @@ class Registry
 	*/
 	var $config;
 
+	// User-Configuration
+	/**
+	 * Array of data from custom_config.xml.
+	 *
+	 * @var	array
+	 */
+	var $user_config;
+
+	// selected User-Language
+	/**
+	 * Array of data from lang.xml.
+	 *
+	 * @var	array
+	 */
+	var $user_lang;
+
 	// GPC input
 	/**
 	* Array of data that has been cleaned by the input cleaner.
@@ -151,6 +167,15 @@ class Registry
 	}
 
 	/**
+	 * Fetches XML-Informations
+	 */
+	function fetch_xml()
+	{
+	    $this -> user_config = read_xml(CONF_PATH . '/custom_config.xml');
+	    $this -> user_lang   = read_xml( $this -> config['base_path'] . '/language/' . $this -> user_config['language'] . '.xml' );
+	}
+
+	/**
 	* store database configuration
 	*/
 	function fetch_database_config()
@@ -159,7 +184,7 @@ class Registry
 
 	    foreach($data AS $key => $val)
 	    {
-          $this -> tracker -> config[$val["name"]] = $val["wert"];
+          $this -> site -> config[$val["name"]] = $val["wert"];
 	    }
 	}
 
