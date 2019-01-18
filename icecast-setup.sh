@@ -88,7 +88,7 @@ if [ -d ${OPT_PATH} ]; then
     ${LN_PATH} -sf ${OPT_PATH}/sudo sudo
     ${LN_PATH} -sf ${OPT_PATH}/cur curl
     ${LN_PATH} -sf ${OPT_PATH}/lame lame
-    ${LN_PATH} -sf ${OPT_PATH}/xsltproc
+    ${LN_PATH} -sf ${OPT_PATH}/xsltproc xsltproc
 
     echo
     echo 'Media-Lib-Binarys verlinken ...'

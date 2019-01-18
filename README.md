@@ -15,3 +15,24 @@ x86 Intel series (TS-x39, 509, 809) : http://qnapclub.pl/qnas/qpkg/icestation/re
 
 # Forum
 https://forum.qnapclub.de/thread/657-qpkg-paket-icecast/
+
+# Version-Information
+| Lib       | Version    | Compiled |
+| --------- | ---------- | -------- |
+| libvorbis | 1.3.5-1    | Entware  |
+| libshout  | 2.4.1-1    | Entware  |
+| icecast   | 2.4.3-3    | Entware  |
+| lame      | 3.100-1    | Entware  |
+| lame-lib  | 3.100-1    | Entware  |
+| curl      | 7.57.0-1   | Entware  |
+| libcurl   | 7.57.0-1   | Entware  |
+| idn       | 1.33-2     | Entware  |
+| libidn    | 1.33-2     | Entware  |
+| ices      | 0.4.0      | Self     |
+| ices      | 2.0.2-1    | Entware  |
+| xsltproc  | 1.1.31-1   | Entware  |
+| libxml2   | 2.9.7-1    | Entware  |
+| libexslt  | 1.1.31-1   | Entware  |
+| libogg    | 1.3.2-2    | Entware  |
+| sudo      | 1.8.21p2-1 | Entware  |
+
