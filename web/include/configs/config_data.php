@@ -12,6 +12,7 @@ $config = array(
 
     // System-Paths
     'base_path' => getcwd(),
+    'log_path'  => getcwd() . '/log',
 );
 
 ?>
