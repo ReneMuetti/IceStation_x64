@@ -1,0 +1,11 @@
+/* Default-Skin ( based on v2.0.0 b1023 ) */
+html {
+    background-color: #666666;
+    padding: 0;
+    margin: 0
+}
+.body {
+    font-family: Trebuchet MS, Calibri, Arial, Tahoma;
+    font-size: 12px;
+    color: #FFFFFF;
+}
