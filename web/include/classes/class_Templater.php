@@ -13,6 +13,7 @@ class Templater
         $this -> registry = $site;
 
         $this -> _fetch_local_vars();
+        $this -> _fetch_language();
     }
 
     public function __destruct()
@@ -22,17 +23,13 @@ class Templater
 
     public function setVariable($key = null, $value = null)
     {
-///*
         if ( strlen($key) AND strlen($value) ) {
             $this -> vars['<var ' . $key . ' />'] = $value;
         }
-//*/
     }
 
     public function loadTemplate($templateName = '', $saveForRendering = true)
     {
-        //$this -> template = '';
-
         $full_path = $this -> registry -> config['templates'] . '/' . $this -> registry -> user_config['skin'] . '/' . $templateName;
 
         if ( is_file($full_path) ) {
@@ -84,6 +81,13 @@ class Templater
 
         foreach( $this -> registry -> user_config AS $key => $value ) {
             $this -> vars['<var_user_config ' . $key . ' />'] = $value;
+        }
+    }
+
+    private function _fetch_language()
+    {
+        foreach( $this -> registry -> user_lang AS $key => $value ) {
+            $this -> vars['<lang ' . $key . ' />'] = $value;
         }
     }
 }

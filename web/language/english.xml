@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <language>
     <configuration>
+        <tip_port>Enter port number, which will be opened for incoming and outgoing connections.</tip_port>
+        <tip_password>Set password for admin user (Icecast Web Service) and to authorize stream sources.</tip_password>
+        <tip_ices0>Ices0 is a local MP3 streaming utility. When it's enabled, user is able to listening favorite MP3 music collection from anyplace. Music generated from playlist will be broadcasted through Icecast server.</tip_ices0>
+        <tip_reencode>Don’t use this feature on a TS-109/209/409 series (slower CPU).</tip_reencode>
+        <title_server_descr>Enter IceStation server descriptions</title_server_descr>
+        <tip_restart_server_1>If all settings are correct, simply push Save button to save all settings. Save button will not restart Icecast server, so whole settings still will not be applied.</tip_restart_server_1>
+        <tip_restart_server_2>If You want to apply any settings, always push Restart Icecast buton after Save button - this will restart Icecast server with new settings.</tip_restart_server_2>
     </configuration>
     <playlist>
     </playlist>
