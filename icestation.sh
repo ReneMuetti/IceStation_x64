@@ -143,8 +143,13 @@ case "$1" in
 	    echo "$SERVICE service running, everything is fine"
 	else
 	    echo "$SERVICE is not running, starting it into background"
-	    ${INSTALLDIR}/${SERVICE} 1> /dev/null 2> /dev/null &
+	    ${SERVICE} 1> /dev/null 2> /dev/null &
 	fi
+
+    PID=$(ps | grep -v grep | grep ${SERVICE} | cut -f2 -d" ")
+    echo "Cron-PID: "${PID}
+    /bin/rm -f ${CRONPID}
+	echo ${PID} > ${CRONPID}
 
 	;;
   stop)
