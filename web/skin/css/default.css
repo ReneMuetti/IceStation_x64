@@ -13,6 +13,15 @@ html {
 .shaddow-base {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
 }
+.big-tabs {
+    display: block;
+    margin-bottom: 12px;
+}
+.col-content {
+    width: 100%;
+    height: 100%;
+    margin: 0 30px;
+}
 
 #page-content {
     width: 90%;
@@ -30,11 +39,12 @@ html {
     background-repeat: repeat-x;
     height: 31px;
     position: relative;
-    border-bottom: 2px solid #F77D2D;
+    border-bottom: 3px solid #F77D2D;
 }
 #content {
     height: 80vh;
     position: relative;
+    border-top: 1px solid #FFFFFF;
 }
 #footer {
     position: relative;
@@ -150,10 +160,43 @@ html {
     border-bottom-right-radius: 15px;
     right: 0;
     width: 114px;
+    text-align: center;
 }
 
 #footer-left-block > span,
-#footer-content-block > span {
+#footer-content-block > span,
+#footer-right-block > span {
     margin-top: 5px;
     display: inline-block;
+}
+#footer-content-block > span {
+    padding-left: 30px;
+}
+
+/* 2-Col-Definitions */
+#two-col-block {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#two-col-block > * {
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    top: 0;
+}
+#left-col, #right-col {
+    width: 49.5%;
+}
+#left-col {
+    left: 0;
+}
+#vertical-separator {
+    background-image: url('../images/default/two-col-seperator.png');
+    background-repeat: repeat-y;
+    width: 14px;
+    left: 49.5%;
+}
+#right-col {
+    right: 0;
 }

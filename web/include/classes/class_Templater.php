@@ -4,7 +4,7 @@ class Templater
     private $registry = null;
     private $vars = array();
 
-    private $template = '';
+    private $template;
 
     public function __construct()
     {
@@ -17,10 +17,22 @@ class Templater
 
     public function __destruct()
     {
+        unset($this -> template, $this -> vars, $this -> registry);
+    }
+
+    public function setVariable($key = null, $value = null)
+    {
+///*
+        if ( strlen($key) AND strlen($value) ) {
+            $this -> vars['<var ' . $key . ' />'] = $value;
+        }
+//*/
     }
 
     public function loadTemplate($templateName = '', $saveForRendering = true)
     {
+        //$this -> template = '';
+
         $full_path = $this -> registry -> config['templates'] . '/' . $this -> registry -> user_config['skin'] . '/' . $templateName;
 
         if ( is_file($full_path) ) {
