@@ -9,11 +9,14 @@ body {
     font-size: 10px;
 }
 
+/* Default-Design für Label-Input-Combination */
 div > label {
     font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
     position: relative;
     margin: 8px 0;
-    padding: 4px 0 4px 2px;
+    padding: 4px 0 4px 4px;
     background-image: url('../images/default/label_background.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -35,6 +38,10 @@ div > input[type="text"] {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+}
+.info-tip {
+    color: #FFFFFF;
+    font-size: 0.9rem;
 }
 
 
@@ -323,7 +330,7 @@ div > input[type="text"] {
 }
 
 /* Default-Block-Elements */
-.input-description {
+.input-description, .input-long {
     display: block;
     width: 100%;
     margin-bottom: 20px;
@@ -341,8 +348,18 @@ div > input[type="text"] {
     width: 200px;
 }
 .input-description .info-tip {
-    color: #FFFFFF;
-    font-size: 0.9rem;
     width: 65%;
     padding-left: 20px;
+}
+.input-long {
+    margin-bottom: 0;
+}
+.input-long label {
+    width: 15%;
+}
+.input-long input[type="text"] {
+    width: 80%;
+}
+#ices0-tip {
+    padding-left: 5px;
 }
