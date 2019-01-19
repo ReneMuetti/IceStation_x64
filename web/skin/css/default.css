@@ -164,7 +164,7 @@ body {
 #header-tab-home {
     background-image: url('../images/default/menu_button_configuration.png');
 }
-#header-tab-home:hover, #header-tab-home:active, ##header-tab-home:focus {
+#header-tab-home:hover, #header-tab-home:active, #header-tab-home:focus {
     background-image: url('../images/default/menu_button_configuration_focus.png');
 }
 #header-tab-home-current {
