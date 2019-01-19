@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <language>
     <configuration>
+        <tip_start_stream>Stream starten</tip_start_stream>
         <tip_port>Gib die Portnummer ein, welche für eingehende und ausgehende Verbindungen geöffnet wird.</tip_port>
         <tip_password>Setzt das Passwort für den Admin-Benutzer (Icecast Web Service) und zur Autorisierung von Stream-Quellen.</tip_password>
         <tip_ices0>Ices0 ist ein lokales MP3-Streaming-Programm. Wenn es aktiviert ist, kann der Benutzer die Lieblings-MP3-Musiksammlung von überall her hören. Aus der Playlist generierte Musik wird über den Icecast-Server übertragen.</tip_ices0>

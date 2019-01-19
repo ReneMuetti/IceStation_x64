@@ -31,5 +31,6 @@ $content = $renderer -> renderTemplate();
 $renderer -> loadTemplate('page.htm');
     $renderer -> setVariable('page_content', $content);
     $renderer -> renderDebugOutput($site);
+    $renderer -> renderDebugOutput($renderer);
 print_output($renderer -> renderTemplate());
 ?>

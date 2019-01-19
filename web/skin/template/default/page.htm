@@ -5,9 +5,9 @@
 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta http-equiv="pragma" content="no-cache" />
-        <meta http-equiv="expires" content="300" />
-        <meta http-equiv="cache-control" content="private" />
+        <meta http-equiv="Expires" content="0" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <meta name="robots" content="noindex, nofollow, noarchive" />
@@ -41,7 +41,14 @@
             </div>
             <div id="navbar">
                 <div id="navbar-left-border"></div>
-                <div id="navbar-right"></div>
+                <div id="navbar-right">
+                    <img src="<var_config baseurl />/skin/images/default/window_menu_right_left_border.png" id="navbar-right-left-border" />
+                    <span id="stream-url">
+                        <var_config server_name />:<var_icecast port />
+                    </span>
+                    <a href="http://<var_ices0 url />:<var_icecast port /><var_icecast mount />" title="<lang configuration_tip_start_stream />" id="play-stream">&nbsp;</a>
+                    <img src="<var_config baseurl />/skin/images/default/window_menu_right_right_border.png" id="navbar-right-right-border" />
+                </div>
             </div>
             <div id="content">
                 <div id="content-border-left"></div>
