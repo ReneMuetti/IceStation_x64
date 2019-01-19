@@ -6,6 +6,11 @@ class Templater
 
     private $template;
 
+    /**
+     * Class Constructor
+     *
+     * @access    public
+     */
     public function __construct()
     {
         global $site;
@@ -19,11 +24,23 @@ class Templater
         $this -> _fetch_ices2();
     }
 
+    /**
+     * Class Finished
+     *
+     * @access    public
+     */
     public function __destruct()
     {
         unset($this -> template, $this -> vars, $this -> registry);
     }
 
+    /**
+     * Add Variable for Rendering
+     *
+     * @access    public
+     * @param     string         Key for Creation
+     * @param     string         Value for Key
+     */
     public function setVariable($key = null, $value = null)
     {
         if ( strlen($key) ) {
@@ -31,6 +48,14 @@ class Templater
         }
     }
 
+    /**
+     * loading Template from Template-File
+     *
+     * @access    public
+     * @param     string         Name from Template
+     * @param     bool           Save Content in Variable or direct return
+     * @return    none|string
+     */
     public function loadTemplate($templateName = '', $saveForRendering = true)
     {
         $full_path = $this -> registry -> config['templates'] . '/' . $this -> registry -> user_config['skin'] . '/' . $templateName;
@@ -45,6 +70,12 @@ class Templater
         }
     }
 
+    /**
+     * Replate all Variable-Keys in Template
+     *
+     * @access    public
+     * @return    string
+     */
     public function renderTemplate()
     {
         return str_replace(
@@ -54,6 +85,12 @@ class Templater
                );
     }
 
+    /**
+     * Append Debug-Output to MainPage
+     *
+     * @access    public
+     * @param     mixed          Variable for Output
+     */
     public function renderDebugOutput($debugVar = null)
     {
         if ( !is_null($debugVar) ) {
@@ -64,6 +101,17 @@ class Templater
         }
     }
 
+    /*************************************************************************************/
+    /********************************  Private Functions  ********************************/
+    /*************************************************************************************/
+
+    /**
+     * rendering Debug-Output
+     *
+     * @access    private
+     * @param     string         Content from Variable
+     * @return    string
+     */
     private function _addDebugOutput($debugVar = null)
     {
         $debugVar = htmlentities(trim($debugVar), ENT_QUOTES | ENT_XHTML | ENT_IGNORE, "UTF-8");
@@ -75,6 +123,11 @@ class Templater
                );
     }
 
+    /**
+     * add local Vars for Rendering
+     *
+     * @access    private
+     */
     private function _fetch_local_vars()
     {
         $this -> vars['<var before_finished />'] = '';
@@ -92,6 +145,11 @@ class Templater
         }
     }
 
+    /**
+     * add Language for Rendering
+     *
+     * @access    private
+     */
     private function _fetch_language()
     {
         foreach( $this -> registry -> user_lang AS $section => $data ) {
@@ -106,6 +164,11 @@ class Templater
         }
     }
 
+    /**
+     * add Settings from Icecast for Rendering
+     *
+     * @access    private
+     */
     private function _fetch_icecast()
     {
         $this -> vars['<var_icecast port />']   = $this -> registry -> icecast['listen-socket']['port'];
@@ -114,6 +177,11 @@ class Templater
         $this -> vars['<var_icecast status />'] = $this -> registry -> icecast['paths']['alias']['dest'];
     }
 
+    /**
+     * add Settings from Icecs0 for Rendering
+     *
+     * @access    private
+     */
     private function _fetch_ices0()
     {
         $this -> vars['<var_ices2 port />']      = $this -> registry -> ices0['Stream']['Server']['Port'];
@@ -128,6 +196,11 @@ class Templater
         $this -> vars['<var_ices0 channels />']  = $this -> registry -> ices0['Stream']['Channels'];
     }
 
+    /**
+     * add Settings from Ices2 for Rendering
+     *
+     * @access    private
+     */
     private function _fetch_ices2()
     {
         $this -> vars['<var_ices2 port />']      = $this -> registry -> ices2['instance']['port'];
