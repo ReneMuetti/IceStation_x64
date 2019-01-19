@@ -63,6 +63,7 @@ class Templater
         if ( is_file($full_path) ) {
             if ($saveForRendering) {
                 $this -> template = file_get_contents($full_path);
+                $this -> template = str_replace('', '', $this -> template);
             }
             else {
                 return file_get_contents($full_path);
@@ -155,11 +156,11 @@ class Templater
         foreach( $this -> registry -> user_lang AS $section => $data ) {
             if ( is_array($data) ) {
                 foreach( $data AS $key => $value ) {
-                    $this -> vars['<lang ' . $section . '_' . $key . ' />'] = $value;
+                    $this -> vars['<lang ' . $section . '_' . $key . ' />'] = htmlentities($value, ENT_XHTML, 'ISO8859-1');
                 }
             }
             else {
-                $this -> vars['<lang ' . $section . ' />'] = $value;
+                $this -> vars['<lang ' . $section . ' />'] = htmlentities($data, ENT_XHTML, 'ISO8859-1');
             }
         }
     }
@@ -171,10 +172,11 @@ class Templater
      */
     private function _fetch_icecast()
     {
-        $this -> vars['<var_icecast port />']   = $this -> registry -> icecast['listen-socket']['port'];
-        $this -> vars['<var_icecast mount />']  = $this -> registry -> icecast['listen-socket']['shoutcast-mount'];
-        $this -> vars['<var_icecast server />'] = $this -> registry -> icecast['server-id'];
-        $this -> vars['<var_icecast status />'] = $this -> registry -> icecast['paths']['alias']['dest'];
+        $this -> vars['<var_icecast port />']     = $this -> registry -> icecast['listen-socket']['port'];
+        $this -> vars['<var_icecast mount />']    = $this -> registry -> icecast['listen-socket']['shoutcast-mount'];
+        $this -> vars['<var_icecast server />']   = $this -> registry -> icecast['server-id'];
+        $this -> vars['<var_icecast status />']   = $this -> registry -> icecast['paths']['alias']['dest'];
+        $this -> vars['<var_icecast password />'] = $this -> registry -> icecast['authentication']['source-password'];
     }
 
     /**

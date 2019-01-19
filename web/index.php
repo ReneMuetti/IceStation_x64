@@ -1,7 +1,4 @@
 <?php
-error_reporting(E_ALL & ~ E_NOTICE);
-ini_set ('display_errors', 'On');
-
 // #################### DEFINE IMPORTANT CONSTANTS #######################
 define('THIS_SCRIPT', 'index');
 

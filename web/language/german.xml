@@ -1,6 +1,12 @@
 <?xml version="1.0"?>
 <language>
     <configuration>
+        <label_icecast_port>Port</label_icecast_port>
+        <label_icecast_password>Passwort</label_icecast_password>
+        <label_ices0_name>Name</label_ices0_name>
+        <label_ices0_genre>Genre</label_ices0_genre>
+        <label_ices0_descr>Beschreibung</label_ices0_descr>
+        <label_ices0_url>URL</label_ices0_url>
         <tip_start_stream>Stream starten</tip_start_stream>
         <tip_port>Gib die Portnummer ein, welche für eingehende und ausgehende Verbindungen geöffnet wird.</tip_port>
         <tip_password>Setzt das Passwort für den Admin-Benutzer (Icecast Web Service) und zur Autorisierung von Stream-Quellen.</tip_password>

@@ -1,5 +1,11 @@
 <?php
 /**
+ * Enable Error-Reposting vor Development
+ */
+error_reporting(E_ALL & ~ E_NOTICE);
+ini_set ('display_errors', 'On');
+
+/**
  * Loading Pre-Configuration
  */
 include_once realpath('./include/configs/config_data.php');

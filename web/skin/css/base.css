@@ -1,5 +1,6 @@
 /* Base-Definitions */
 pre {
+    font-size: 12px;
     overflow: scroll;
     padding: 3px;
     border: 1px solid #000000;
@@ -8,5 +9,5 @@ pre {
     max-height: 500px;
     margin: 50px 0;
     background-color: #FFFFFF;
-    width: 70%;
+    width: 80%;
 }
