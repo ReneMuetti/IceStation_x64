@@ -26,7 +26,7 @@ class Templater
 
     public function setVariable($key = null, $value = null)
     {
-        if ( strlen($key) AND strlen($value) ) {
+        if ( strlen($key) ) {
             $this -> vars['<var ' . $key . ' />'] = $value;
         }
     }

@@ -135,6 +135,69 @@ body {
     width: 2px;
     left: 0;
 }
+
+#navbar-tabs {
+    height: 100%;
+}
+#navbar-tabs > * {
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    top: 0;
+}
+#navbar-tabs > a {
+    width: 98px;
+    top: -20px;
+    text-decoration: none;
+}
+#start-space {
+    width: 75px;
+}
+#header-tab-home-current, #header-tab-playlist-current, #header-tab-mainlog-current, #header-tab-ices0log-current {
+    top: -15px !important;
+    height: 25px;
+}
+.header-tab-seperator {
+    background-image: url('../images/default/window_menu_tabseperator.png');
+    width: 8px;
+}
+#header-tab-home {
+    background-image: url('../images/default/menu_button_configuration.png');
+}
+#header-tab-home:hover, #header-tab-home:active, ##header-tab-home:focus {
+    background-image: url('../images/default/menu_button_configuration_focus.png');
+}
+#header-tab-home-current {
+    background-image: url('../images/default/menu_button_configuration_selected.png');
+}
+#header-tab-playlist {
+    background-image: url('../images/default/menu_button_playlists.png');
+}
+#header-tab-playlist:hover, #header-tab-playlist:active, #header-tab-playlist:focus {
+    background-image: url('../images/default/menu_button_playlists_focus.png');
+}
+#header-tab-playlist-current {
+    background-image: url('../images/default/menu_button_playlists_selected.png');
+}
+#header-tab-mainlog {
+    background-image: url('../images/default/menu_button_show_main_log.png');
+}
+#header-tab-mainlog:hover, #header-tab-mainlog:active, #header-tab-mainlog:focus {
+    background-image: url('../images/default/menu_button_show_main_log_focus.png');
+}
+#header-tab-mainlog-current {
+    background-image: url('../images/default/menu_button_show_main_log_selected.png');
+}
+#header-tab-ices0log {
+    background-image: url('../images/default/menu_button_show_ices0_log.png');
+}
+#header-tab-ices0log:hover, #header-tab-ices0log:active, #header-tab-ices0log:focus {
+    background-image: url('../images/default/menu_button_show_ices0_log_focus.png');
+}
+#header-tab-ices0log-current {
+    background-image: url('../images/default/menu_button_show_ices0_log_selected.png');
+}
+
 #navbar-right {
     background-image: url('../images/default/window_menu_right_background.png');
     min-width: 194px;
