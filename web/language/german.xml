@@ -1,5 +1,12 @@
 <?xml version="1.0"?>
 <language>
+    <navbar>
+        <configuration>Einstellungen</configuration>
+        <icestation>Ice Station</icestation>
+        <playlist>Playlist</playlist>
+        <mainlog>Icecast-LOG</mainlog>
+        <iceslog>Ices-LOG</iceslog>
+    </navbar>
     <configuration>
         <label_icecast_port>Port</label_icecast_port>
         <label_icecast_password>Passwort</label_icecast_password>
@@ -10,7 +17,7 @@
         <label_ices0_descr>Beschreibung</label_ices0_descr>
         <label_ices0_url>URL</label_ices0_url>
         <label_shoutcast_public>In der Shoutcast Bibliothek veröffentlichen</label_shoutcast_public>
-        <label_enable_recode>Re-encode</label_enable_recode>
+        <label_enable_recode>neu Codieren</label_enable_recode>
         <label_ices0_bitrate>Bitrate</label_ices0_bitrate>
         <label_ices0_channels>Kanäle</label_ices0_channels>
         <label_new_server_name>Addresse</label_new_server_name>
@@ -24,8 +31,8 @@
         <tip_ices0>Ices0 ist ein lokales MP3-Streaming-Programm. Wenn es aktiviert ist, kann der Benutzer die Lieblings-MP3-Musiksammlung von überall her hören. Aus der Playlist generierte Musik wird vom Icecast-Server übertragen.</tip_ices0>
         <tip_reencode>Benutze diese Funktion nicht bei einer TS-109/209/209/409 Serie (langsamere CPU).</tip_reencode>
         <title_server_descr>IceStation Serverbeschreibung eintragen</title_server_descr>
-        <tip_restart_server_1>Wenn alle Einstellungen korrekt sind, drücke einfach die Save-Taste, um alle Einstellungen zu speichern. Die Schaltfläche Speichern startet den Icecast-Server nicht neu, so dass noch immer nicht alle Einstellungen übernommen werden.</tip_restart_server_1>
-        <tip_restart_server_2>Um Einstellungen zu übernehmen, klicke immer auf die Schaltfläche Restart Icecast aber erst nach dem Speichern - dadurch wird der Icecast-Server mit den neuen Einstellungen gestartet.</tip_restart_server_2>
+        <tip_restart_server_1>Wenn alle Einstellungen korrekt sind, drücke einfach den Speichern-Button, um alle Einstellungen zu speichern. Die Schaltfläche Speichern startet den Icecast-Server nicht neu, so dass noch immer nicht alle Einstellungen übernommen werden.</tip_restart_server_1>
+        <tip_restart_server_2>Um Einstellungen zu übernehmen, klicke auf die Schaltfläche Neustart Icecast aber immer erst nach dem Speichern - dadurch wird der Icecast-Server mit den neuen Einstellungen gestartet.</tip_restart_server_2>
         <placeholder_address>Serveradresse oder IP</placeholder_address>
         <placeholder_port>Port</placeholder_port>
         <placeholder_mount>Mount-Pfad</placeholder_mount>

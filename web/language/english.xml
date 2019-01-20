@@ -1,5 +1,12 @@
 <?xml version="1.0"?>
 <language>
+    <navbar>
+        <configuration>Configuration</configuration>
+        <icestation>Ice Station</icestation>
+        <playlist>Playlist</playlist>
+        <mainlog>Show Main Log</mainlog>
+        <iceslog>Show Ices Log</iceslog>
+    </navbar>
     <configuration>
         <label_icecast_port>Port</label_icecast_port>
         <label_icecast_password>Password</label_icecast_password>
@@ -18,7 +25,6 @@
         <label_new_server_mount>Mount path</label_new_server_mount>
         <label_on_demand>On-demand</label_on_demand>
         <label_meta_data>Meta-data</label_meta_data>
-        <tip_start_stream>Stream starten</tip_start_stream>
         <tip_start_stream>play stream</tip_start_stream>
         <tip_port>Enter port number, which will be opened for incoming and outgoing connections.</tip_port>
         <tip_password>Set password for admin user (Icecast Web Service) and to authorize stream sources.</tip_password>
