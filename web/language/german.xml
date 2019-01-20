@@ -13,6 +13,11 @@
         <label_enable_recode>Re-encode</label_enable_recode>
         <label_ices0_bitrate>Bitrate</label_ices0_bitrate>
         <label_ices0_channels>Kanäle</label_ices0_channels>
+        <label_new_server_name>Addresse</label_new_server_name>
+        <label_new_server_port>Port</label_new_server_port>
+        <label_new_server_mount>Mount-Pfad</label_new_server_mount>
+        <label_on_demand>On-demand</label_on_demand>
+        <label_meta_data>Meta-data</label_meta_data>
         <tip_start_stream>Stream starten</tip_start_stream>
         <tip_port>Gib die Portnummer ein, welche für eingehende und ausgehende Verbindungen geöffnet wird.</tip_port>
         <tip_password>Setzt das Passwort für den Admin-Benutzer (Icecast Web Service) und zur Autorisierung von Stream-Quellen.</tip_password>
@@ -21,6 +26,9 @@
         <title_server_descr>IceStation Serverbeschreibung eintragen</title_server_descr>
         <tip_restart_server_1>Wenn alle Einstellungen korrekt sind, drücke einfach die Save-Taste, um alle Einstellungen zu speichern. Die Schaltfläche Speichern startet den Icecast-Server nicht neu, so dass noch immer nicht alle Einstellungen übernommen werden.</tip_restart_server_1>
         <tip_restart_server_2>Um Einstellungen zu übernehmen, klicke immer auf die Schaltfläche Restart Icecast aber erst nach dem Speichern - dadurch wird der Icecast-Server mit den neuen Einstellungen gestartet.</tip_restart_server_2>
+        <placeholder_address>Serveradresse oder IP</placeholder_address>
+        <placeholder_port>Port</placeholder_port>
+        <placeholder_mount>Mount-Pfad</placeholder_mount>
     </configuration>
     <playlist>
     </playlist>

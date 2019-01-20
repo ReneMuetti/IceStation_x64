@@ -1,3 +1,39 @@
 <div class="col-content">
     <img src="<var_config baseurl />/skin/images/default/bigtab-relay-servers.png" class="big-tabs" />
+    <div class="block-horizontal-spacer">
+        <div class="input-label input-long">
+            <label for="new-server-name"><lang configuration_label_new_server_name /></label>
+            <input type="text" name="new_server_name" id="new-server-name" value="" placeholder="<lang configuration_placeholder_address />" />
+        </div>
+        <div class="input-label input-long">
+            <label for="new-server-port"><lang configuration_label_new_server_port /></label>
+            <input type="text" name="new_server_port" id="new-server-port" value="" placeholder="<lang configuration_placeholder_port />" />
+        </div>
+        <div class="input-label input-long">
+            <label for="new-server-mount"><lang configuration_label_new_server_mount /></label>
+            <input type="text" name="new_server_mount" id="new-server-mount" value="" placeholder="<lang configuration_placeholder_mount />"/>
+        </div>
+        <div id="new-server-selections">
+            <div class="checkbox-label checkbox-description">
+                <input type="checkbox" name="on_demand" id="on-demand" value="1" <var on_demand /> />
+                <span id="img-on-demand" class="checkbox-image"></span>
+                <label for="on-demand" id="on-demand-label"><lang configuration_label_on_demand /></label>
+            </div>
+            <div class="checkbox-label checkbox-description">
+                <input type="checkbox" name="meta_data" id="meta-data" value="1" <var meta_data /> />
+                <span id="img-meta-data" class="checkbox-image"></span>
+                <label for="meta-data" id="meta-data-label"><lang configuration_label_meta_data /></label>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block-horizontal-spacer">
+        <div class="info-tip">
+            <lang configuration_tip_restart_server_1 />
+        </div>
+        <div class="info-tip">
+            <lang configuration_tip_restart_server_2 />
+        </div>
+    </div>
 </div>

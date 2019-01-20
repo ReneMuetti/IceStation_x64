@@ -106,7 +106,7 @@ class Templater
      * Check if a User-Option is set
      *
      * @access    public
-     * @param     string         Section in Registry
+     * @param     string|bool    Section in Registry; If FALSE then if Key a concrete Value
      * @param     string         Key in Registry
      * @return    string
      */
@@ -116,22 +116,37 @@ class Templater
             return 'Section-Key-ERROR!';
         }
         else {
-            if ( isset($this -> registry -> $section) ) {
-                $tmp = $this -> registry -> $section;
-                if ( isset($tmp[$key]) ) {
-                    if ( $tmp[$key] == true ) {
+            if ( is_string($section) ) {
+                if ( isset($this -> registry -> $section) ) {
+                    $tmp = $this -> registry -> $section;
+                    if ( isset($tmp[$key]) ) {
+                        if ( $tmp[$key] == true ) {
+                            return ' checked="checked"';
+                        }
+                        else {
+                            return '';
+                        }
+                    }
+                    else {
+                        return 'Key not exists!';
+                    }
+                }
+                else {
+                    return 'Section not exists!';
+                }
+            }
+            else {
+                if ( is_null($key) ) {
+                    return 'Key not set!';
+                }
+                else {
+                    if ( $key == true ) {
                         return ' checked="checked"';
                     }
                     else {
                         return '';
                     }
                 }
-                else {
-                    return 'Key not exists!';
-                }
-            }
-            else {
-                return 'Section not exists!';
             }
         }
     }
@@ -209,6 +224,7 @@ class Templater
         $this -> vars['<var_icecast mount />']  = $this -> registry -> icecast['listen-socket']['shoutcast-mount'];
         $this -> vars['<var_icecast server />'] = $this -> registry -> icecast['server-id'];
         $this -> vars['<var_icecast status />'] = $this -> registry -> icecast['paths']['alias']['dest'];
+        $this -> vars['<var_icecast port />']   = $this -> registry -> icecast['listen-socket']['port'];
     }
 
     /**
@@ -220,9 +236,6 @@ class Templater
     {
         $this -> vars['<var_ices0 port />']   = $this -> registry -> ices0['Stream']['Server']['Port'];
         $this -> vars['<var_ices0 mount />']  = $this -> registry -> ices0['Stream']['Mountpoint'];
-
-        $this -> vars['<var_ices0 public />'] = $this -> registry -> ices0['Stream']['Public'];
-        $this -> vars['<var_ices0 recode />'] = $this -> registry -> ices0['Stream']['Reencode'];
     }
 
     /**
