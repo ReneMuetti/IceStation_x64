@@ -3,10 +3,16 @@
     <configuration>
         <label_icecast_port>Port</label_icecast_port>
         <label_icecast_password>Password</label_icecast_password>
+        <label_ices0_start>Start Ices0 service</label_ices0_start>
+        <label_ices0_random>Play randomized...</label_ices0_random>
         <label_ices0_name>Name</label_ices0_name>
         <label_ices0_genre>Genre</label_ices0_genre>
         <label_ices0_descr>Description</label_ices0_descr>
         <label_ices0_url>URL</label_ices0_url>
+        <label_shoutcast_public>Public in Shoutcast library</label_shoutcast_public>
+        <label_enable_recode>Re-encode</label_enable_recode>
+        <label_ices0_bitrate>Bitrate</label_ices0_bitrate>
+        <label_ices0_channels>Channels</label_ices0_channels>
         <tip_start_stream>play stream</tip_start_stream>
         <tip_port>Enter port number, which will be opened for incoming and outgoing connections.</tip_port>
         <tip_password>Set password for admin user (Icecast Web Service) and to authorize stream sources.</tip_password>

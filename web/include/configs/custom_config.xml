@@ -2,4 +2,6 @@
 <config>
     <skin>default</skin>
     <language>german</language>
+    <start_ices0_service>1</start_ices0_service>
+    <play_ranomized>0</play_ranomized>
 </config>

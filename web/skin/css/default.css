@@ -10,11 +10,12 @@ body {
 }
 
 /* Default-Design für Label-Input-Combination */
-div > label {
+div.input-label > label {
     font-size: 0.8rem;
     font-weight: bold;
     display: inline-block;
     position: relative;
+    color: #000000;
     margin: 8px 0;
     padding: 4px 0 4px 4px;
     background-image: url('../images/default/label_background.png');
@@ -27,7 +28,7 @@ div > label {
     border-bottom-left-radius: 3px;
     box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
 }
-div > input[type="text"] {
+div.input-label > input[type="text"] {
     position: relative;
     margin: 8px 0;
     padding: 4px 0 4px 8px;
@@ -39,6 +40,46 @@ div > input[type="text"] {
     border-bottom-right-radius: 3px;
     box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
 }
+div.checkbox-label > input[type="checkbox"] {
+    position: absolute;
+    z-index:-1000;
+    left:-1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height:1px;
+    width:1px;
+    margin:-1px;
+    padding:0;
+    border:0;
+}
+div.checkbox-label > label {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #000000;
+    display: inline-block;
+    position: relative;
+    margin: 8px 0 8px 8px;
+    padding: 4px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+    background-color: #cad1d7;
+    cursor: pointer;
+}
+div.checkbox-label > span.checkbox-image {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    top: 5px;
+    position: relative;
+    background-image: url('../images/default/checkbox_set.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+div.checkbox-label > input[type="checkbox"]:checked + span.checkbox-image {
+    background-position: 0 -18px;
+}
+
 input[type="text"]:active, input[type="text"]:focus {
     color: #666A84;
     font-weight: bold;
@@ -164,10 +205,12 @@ input[type="text"]:active, input[type="text"]:focus {
     margin: 0 30px 0 10px;
     top: -5px;
     position: relative;
-    background-image: url('../images/default/button_play.png');
+    background-image: url('../images/default/button_play_set.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
 }
 #play-stream:hover, #play-stream:active, #play-stream:focus {
-    background-image: url('../images/default/button_play_focus.png');
+    background-position: 0 22px;
 }
 #navbar-left-border {
     background-image: url('../images/default/window_menu_border_left.png');
@@ -334,10 +377,14 @@ input[type="text"]:active, input[type="text"]:focus {
 }
 
 /* Default-Block-Elements */
-.input-description, .input-long {
+.block-horizontal-spacer {
+    margin-bottom: 20px;
+}
+
+.input-description, .input-long, .checkbox-label {
     display: block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     position: relative;
     font-size: 0;
 }
@@ -349,12 +396,12 @@ input[type="text"]:active, input[type="text"]:focus {
     width: 80px;
 }
 .input-description input[type="text"] {
-    width: 100px;
+    width: 142px;
 }
 .input-description .info-tip {
     max-width: 74%;
     padding-left: 20px;
-    width: calc(100% - 225px);
+    width: calc(100% - 260px);
 }
 .input-long {
     margin-bottom: 0;
@@ -367,4 +414,37 @@ input[type="text"]:active, input[type="text"]:focus {
 }
 #ices0-tip {
     padding-left: 5px;
+}
+
+.checkbox-description {
+    margin-bottom: 0;
+}
+#config-setting-ices0 {
+    display: inline-block;
+    vertical-align: top;
+    width: 240px;
+}
+#config-setting-ices0 label {
+    width: 200px;
+}
+#config-setting-ices0-info {
+    display: inline-block;
+    width: calc(100% - 275px);
+    margin-left: 10px;
+}
+#config-setting-ices0-recode {
+    font-size: 0;
+}
+#config-setting-ices0-recode > div {
+    display: inline-block;
+    width: 30%;
+}
+#config-setting-ices0-recode label {
+   width: 80px;
+}
+#config-setting-ices0-recode input {
+    width: 112px;
+}
+label#recode-label {
+    width: 200px;
 }

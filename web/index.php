@@ -24,6 +24,18 @@ $navbar = $renderer -> renderTemplate();
 
 // left Col (Main-Settings)
 $renderer -> loadTemplate('config-main-settings.htm');
+    $renderer -> setVariable('icecast_port'    , $site -> icecast['listen-socket']['port']);
+    $renderer -> setVariable('icecast_password', $site -> icecast['authentication']['source-password']);
+    $renderer -> setVariable('ices0_restart'   , $renderer -> getCheckboxState('user_config', 'start_ices0_service') );
+    $renderer -> setVariable('ices0_random'    , $renderer -> getCheckboxState('user_config', 'play_ranomized') );
+    $renderer -> setVariable('ices0_name'      , $site -> ices0['Stream']['Name']);
+    $renderer -> setVariable('ices0_genre'     , $site -> ices0['Stream']['Genre']);
+    $renderer -> setVariable('ices0_desc'      , $site -> ices0['Stream']['Description']);
+    $renderer -> setVariable('ices0_url'       , $site -> ices0['Stream']['URL']);
+    $renderer -> setVariable('shoutcast_public', '');
+    $renderer -> setVariable('enable_recode'   , '');
+    $renderer -> setVariable('ices0_bitrate'   , $site -> ices0['Stream']['Bitrate']);
+    $renderer -> setVariable('ices0_channels'  , $site -> ices0['Stream']['Channels']);
 $left_col = $renderer -> renderTemplate();
 
 // right Col (Main-Settings)
