@@ -231,6 +231,8 @@ input[type="text"]:active, input[type="text"]:focus {
     width: 98px;
     top: -20px;
     text-decoration: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 #start-space {
     width: 75px;
@@ -434,6 +436,9 @@ input[type="text"]:active, input[type="text"]:focus {
 }
 #config-setting-ices0-recode {
     font-size: 0;
+}
+#config-setting-ices0-recode > span {
+    display: block;
 }
 #config-setting-ices0-recode > div {
     display: inline-block;
