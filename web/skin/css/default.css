@@ -69,6 +69,7 @@ div.checkbox-label > label {
 div.checkbox-label > span.checkbox-image {
     width: 18px;
     height: 18px;
+    cursor: pointer;
     display: inline-block;
     top: 5px;
     position: relative;
