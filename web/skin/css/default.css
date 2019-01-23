@@ -9,6 +9,32 @@ body {
     font-size: 10px;
 }
 
+/* Buttons */
+button {
+    border: none;
+    border-radius: 8px;
+    height: 36px;
+    min-width: 110px;
+    width: auto;
+    padding: 0 10px;
+    text-align: center;
+    color: #FFFFFF;
+    background-image: url('../images/default/button_set.png');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 -1px;
+    background-color: transparent;
+}
+button.toggle-blue:hover {
+    background-position: 0 -40px;
+}
+button.toggle-yellow:hover {
+    background-position: 0 -78px;
+}
+button.toggle-red:hover {
+    background-position: 0 -116.5px;
+}
+
 /* Default-Design für Label-Input-Combination */
 div.input-label > label {
     font-size: 0.8rem;
@@ -94,6 +120,9 @@ input[type="text"]:active, input[type="text"]:focus {
 
 .shaddow-base {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+}
+.white-shadow {
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
 }
 .big-tabs {
     display: block;
@@ -202,6 +231,7 @@ input[type="text"]:active, input[type="text"]:focus {
 }
 #play-stream {
     display: inline-block;
+    text-decoration: none;
     width: 25px;
     height: 22px;
     margin: 0 30px 0 10px;
@@ -212,7 +242,7 @@ input[type="text"]:active, input[type="text"]:focus {
     background-repeat: no-repeat;
 }
 #play-stream:hover, #play-stream:active, #play-stream:focus {
-    background-position: 0 22px;
+    background-position: 0 -22px;
 }
 #navbar-left-border {
     background-image: url('../images/default/window_menu_border_left.png');
@@ -436,8 +466,24 @@ label#recode-label {
 
 #new-server-selections > * {
     display: inline-block;
-    width: 49%;
+    width: 33%;
 }
 #new-server-selections label {
     width: 150px;
+}
+
+#relay-list {
+    border: 1px solid #000000;
+    height: 25vh;
+    background-color: #cad1d7;
+    color: #1d232b;
+    width: 99.2%;
+}
+#relay-list table {
+    margin: 5px;
+    width: calc(100% - 10px);
+}
+#relay-list table thead{
+    background-color: #b3b7bd;
+    text-align: center;
 }

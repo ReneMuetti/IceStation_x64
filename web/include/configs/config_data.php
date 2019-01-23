@@ -25,6 +25,7 @@ $config = array(
     'icecast' => $local_home . $xml_path . '/icecast.xml',
     'ices0'   => $local_home . $xml_path . '/ices0.xml',
     'ices2'   => $local_home . $xml_path . '/ices2.xml',
+
 );
 
 ?>

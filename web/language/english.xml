@@ -1,5 +1,14 @@
 <?xml version="1.0"?>
 <language>
+    <global>
+        <ajax_failed>Request failed</ajax_failed>
+        <ajax_success>Request success</ajax_success>
+        <ajax_no_error>no Errors</ajax_no_error>
+        <ajax_new_relay_param_error>Not all parameters were transferred</ajax_new_relay_param_error>
+        <ajax_new_relay_no_name>- no name was specified</ajax_new_relay_no_name>
+        <ajax_new_relay_no_port>- no port was specified</ajax_new_relay_no_port>
+        <ajax_new_relay_no_mount>- no mount path was specified</ajax_new_relay_no_mount>
+    </global>
     <navbar>
         <configuration>Configuration</configuration>
         <icestation>Ice Station</icestation>
@@ -36,6 +45,21 @@
         <placeholder_address>server adress or ip</placeholder_address>
         <placeholder_port>port</placeholder_port>
         <placeholder_mount>mount-path</placeholder_mount>
+        <button_add_new_server>Add Server</button_add_new_server>
+        <relay_table_delete>D</relay_table_delete>
+        <relay_table_adress>Adress</relay_table_adress>
+        <relay_table_port>Port</relay_table_port>
+        <relay_table_mount_path>Mount Path</relay_table_mount_path>
+        <relay_table_local_path>local Path</relay_table_local_path>
+        <relay_table_on_demand>O</relay_table_on_demand>
+        <relay_table_meta>M</relay_table_meta>
+        <relay_table_delete_title>Delete</relay_table_delete_title>
+        <relay_table_adress_title>Adress</relay_table_adress_title>
+        <relay_table_port_title>Port</relay_table_port_title>
+        <relay_table_mount_path_title>Mount Path</relay_table_mount_path_title>
+        <relay_table_local_path_title>local Path</relay_table_local_path_title>
+        <relay_table_on_demand_title>On demand</relay_table_on_demand_title>
+        <relay_table_meta_title>Meta data</relay_table_meta_title>
     </configuration>
     <playlist>
     </playlist>

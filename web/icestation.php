@@ -1,6 +1,6 @@
 <?php
 // #################### DEFINE IMPORTANT CONSTANTS #######################
-define('THIS_SCRIPT', 'index');
+define('THIS_SCRIPT', 'icestation');
 
 // ######################### REQUIRE BACK-END ############################
 require_once './global.php';
@@ -25,7 +25,7 @@ $renderer -> loadTemplate('navbar.htm');
 $navbar = $renderer -> renderTemplate();
 
 // left Col ()
-$left_col = '';;
+$left_col = '';
 
 // right Col ()
 $right_col = '';

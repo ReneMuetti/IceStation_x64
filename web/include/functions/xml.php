@@ -33,7 +33,45 @@ function read_xml($xml_file = null)
     }
 }
 
-function write_xml()
+function write_xml($xml_file = null, $xml_data = null)
 {
+    if ( is_file($xml_file) ) {
+        $xml_data = "<?xml version=\"1.0\"?>\n" . $xml_data;
+        return file_write($xml_file, $xml_data);
+    }
+    else {
+        throw new Exception( 'Datei ' . $xml_file . ' wurde nicht gefunden!' );
+    }
+}
+
+function buildRelayServers($xml_data = null)
+{
+    global $site;
+
+    if ( !count($xml_data) ) {
+        return false;
+    }
+    else {
+        $xml  = new XML_Builder($site, CHARSET);
+        $xml -> add_group('relayserver');
+
+        foreach( $xml_data AS $key => $value ) {
+            if ( is_int($key) ) {
+                $xml -> add_group('server_' . $key);
+            }
+            else {
+                $xml -> add_group($key);
+            }
+
+            foreach( $value AS $value_key => $value_param ) {
+                $xml -> add_tag($value_key, $value_param);
+            }
+
+            $xml -> close_group();
+        }
+        $xml -> close_group();
+
+        return $xml -> output();
+    }
 }
 ?>

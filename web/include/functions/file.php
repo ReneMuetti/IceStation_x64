@@ -1,12 +1,12 @@
 <?php
 // #############################################################################
 /**
-* Returns the contents of a file
-*
-* @param	string	Path to file (including file name)
-*
-* @return	string	If file does not exist, returns an empty string
-*/
+ * Returns the contents of a file
+ *
+ * @param	string	Path to file (including file name)
+ *
+ * @return	string	If file does not exist, returns an empty string
+ */
 function file_read($path)
 {
     // On some versions of PHP under IIS, file_exists returns false for uploaded files,
@@ -18,6 +18,29 @@ function file_read($path)
     else
     {
         return @ file_get_contents($path);
+    }
+}
+
+// #############################################################################
+/**
+ * Write the contents in a file
+ *
+ * @param	string	Path to file (including file name)
+ * @param	string	Filecontent
+ *
+ * @return	string	If file does not exist, returns an empty string
+ */
+function file_write($path, $content)
+{
+    // On some versions of PHP under IIS, file_exists returns false for uploaded files,
+    // even though the file exists and is readable. http://bugs.php.net/bug.php?id=38308
+    if( !file_exists($path) )
+    {
+        return '';
+    }
+    else
+    {
+        return @ file_put_contents($path, $content, LOCK_EX);
     }
 }
 

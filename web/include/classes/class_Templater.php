@@ -205,11 +205,11 @@ class Templater
         foreach( $this -> registry -> user_lang AS $section => $data ) {
             if ( is_array($data) ) {
                 foreach( $data AS $key => $value ) {
-                    $this -> vars['<lang ' . $section . '_' . $key . ' />'] = htmlentities($value, ENT_XHTML, 'ISO8859-1');
+                    $this -> vars['<lang ' . $section . '_' . $key . ' />'] = output_string($value);
                 }
             }
             else {
-                $this -> vars['<lang ' . $section . ' />'] = htmlentities($data, ENT_XHTML, 'ISO8859-1');
+                $this -> vars['<lang ' . $section . ' />'] = output_string($data);
             }
         }
     }

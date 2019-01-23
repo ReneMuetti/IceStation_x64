@@ -1,5 +1,14 @@
 <?xml version="1.0"?>
 <language>
+    <global>
+        <ajax_failed>Anfrage fehlgeschlagen</ajax_failed>
+        <ajax_success>Anfrage erfolgreich</ajax_success>
+        <ajax_no_error>kein Fehler</ajax_no_error>
+        <ajax_new_relay_param_error>Es wurde nicht alle Parameter übertragen</ajax_new_relay_param_error>
+        <ajax_new_relay_no_name>- es wurde kein Name angegeben</ajax_new_relay_no_name>
+        <ajax_new_relay_no_port>- es wurde kein Port angegeben</ajax_new_relay_no_port>
+        <ajax_new_relay_no_mount>- es wurde kein Mount-Pfad angegeben</ajax_new_relay_no_mount>
+    </global>
     <navbar>
         <configuration>Einstellungen</configuration>
         <icestation>Ice Station</icestation>
@@ -36,7 +45,24 @@
         <placeholder_address>Serveradresse oder IP</placeholder_address>
         <placeholder_port>Port</placeholder_port>
         <placeholder_mount>Mount-Pfad</placeholder_mount>
+        <button_add_new_server>Server hinzufügen</button_add_new_server>
+        <relay_table_delete>D</relay_table_delete>
+        <relay_table_adress>Adresse</relay_table_adress>
+        <relay_table_port>Port</relay_table_port>
+        <relay_table_mount_path>Mount-Pfad</relay_table_mount_path>
+        <relay_table_local_path>Lokaler Pfad</relay_table_local_path>
+        <relay_table_on_demand>O</relay_table_on_demand>
+        <relay_table_meta>M</relay_table_meta>
+        <relay_table_delete_title>Löschen</relay_table_delete_title>
+        <relay_table_adress_title>Adresse</relay_table_adress_title>
+        <relay_table_port_title>Port</relay_table_port_title>
+        <relay_table_mount_path_title>Mount-Pfad</relay_table_mount_path_title>
+        <relay_table_local_path_title>Lokaler Pfad</relay_table_local_path_title>
+        <relay_table_on_demand_title>On-demand</relay_table_on_demand_title>
+        <relay_table_meta_title>Meta-data</relay_table_meta_title>
     </configuration>
+    <icestation>
+    </icestation>
     <playlist>
     </playlist>
     <mainlog>

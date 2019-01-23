@@ -24,7 +24,38 @@
                 <span id="img-meta-data" class="checkbox-image"></span>
                 <label for="meta-data" id="meta-data-label"><lang configuration_label_meta_data /></label>
             </div>
+            <div>
+                <button class="toggle-blue" onclick="addNewRelayServer()"><lang configuration_button_add_new_server /></button>
+            </div>
         </div>
+    </div>
+
+    <div id="relay-list" class="white-shadow block-horizontal-spacer">
+        <table id="relay-table">
+            <colset>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+            </colset>
+            <thead>
+                <tr>
+                    <th title="<lang configuration_relay_table_delete_title />"><lang configuration_relay_table_delete /></th>
+                    <th title="<lang configuration_relay_table_adress_title />"><lang configuration_relay_table_adress /></th>
+                    <th title="<lang configuration_relay_table_port_title />"><lang configuration_relay_table_port /></th>
+                    <th title="<lang configuration_relay_table_mount_path_title />"><lang configuration_relay_table_mount_path /></th>
+                    <th title="<lang configuration_relay_table_local_path_title />"><lang configuration_relay_table_local_path /></th>
+                    <th title="<lang configuration_relay_table_on_demand_title />"><lang configuration_relay_table_on_demand /></th>
+                    <th title="<lang configuration_relay_table_meta_title />"><lang configuration_relay_table_meta /></th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
     </div>
 
 

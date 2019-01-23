@@ -42,6 +42,8 @@ $left_col = $renderer -> renderTemplate();
 
 // right Col (Main-Settings)
 $renderer -> loadTemplate('config-servers.htm');
+    $renderer -> setVariable('on_demand', '');
+    $renderer -> setVariable('meta_data', '');
 $right_col = $renderer -> renderTemplate();
 
 // Rendering 2-Col-Layout

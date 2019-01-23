@@ -33,6 +33,9 @@ $config['conf_path']  = CONF_PATH;
 $config['class_path'] = CLASS_PATH;
 $config['func_path']  = FUNC_PATH;
 
+// Relay-Server
+$config['relayserver'] = CONF_PATH . '/relayserver.xml';
+
 /**
  * Class-Loader
  */
@@ -43,6 +46,7 @@ include_once INC_PATH . '/autoloader.php';
  */
 include_once FUNC_PATH . '/file.php';
 include_once FUNC_PATH . '/xml.php';
+include_once FUNC_PATH . '/functions.php';
 
 /**
  * Init
