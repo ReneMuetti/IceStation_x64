@@ -8,6 +8,19 @@
         <ajax_new_relay_no_name>- no name was specified</ajax_new_relay_no_name>
         <ajax_new_relay_no_port>- no port was specified</ajax_new_relay_no_port>
         <ajax_new_relay_no_mount>- no mount path was specified</ajax_new_relay_no_mount>
+        <ajax_delete_relay_param_error>Parameter error when deleting</ajax_delete_relay_param_error>
+        <ajax_delete_relay_found_error>This Server was not found</ajax_delete_relay_found_error>
+        <status_yes>yes</status_yes>
+        <status_no>no</status_no>
+        <ajax_configuration_no_port>- no port was specified</ajax_configuration_no_port>
+        <ajax_configuration_no_password>- no password was specified</ajax_configuration_no_password>
+        <ajax_configuration_no_ices0_name>- no name was specified for the Ices0</ajax_configuration_no_ices0_name>
+        <ajax_configuration_no_ices0_genre>- no genre was specified for the Ices0</ajax_configuration_no_ices0_genre>
+        <ajax_configuration_no_ices0_url>- no address was specified for the Ices0</ajax_configuration_no_ices0_url>
+        <ajax_configuration_ices0_bitrate_error>- no valid bitrate for the Ices0 was specified</ajax_configuration_ices0_bitrate_error>
+        <ajax_configuration_ices0_channel_error>- no channels were specified for the Ices0</ajax_configuration_ices0_channel_error>
+        <ajax_configuration_ices0_channel_not_even>- an even number must be specified for the channels</ajax_configuration_ices0_channel_not_even>
+        <ajax_error_write_file>the following file could not be written:</ajax_error_write_file>
     </global>
     <navbar>
         <configuration>Configuration</configuration>
@@ -40,12 +53,13 @@
         <tip_ices0>Ices0 is a local MP3 streaming utility. When it's enabled, user is able to listening favorite MP3 music collection from anyplace. Music generated from playlist will be broadcasted through Icecast server.</tip_ices0>
         <tip_reencode>Don’t use this feature on a TS-109/209/409 series (slower CPU).</tip_reencode>
         <title_server_descr>Enter IceStation server descriptions</title_server_descr>
-        <tip_restart_server_1>If all settings are correct, simply push Save button to save all settings. Save button will not restart Icecast server, so whole settings still will not be applied.</tip_restart_server_1>
+        <tip_restart_server_1>If all settings are correct, simply push Add Server button to save all settings. Save button will not restart Icecast server, so whole settings still will not be applied.</tip_restart_server_1>
         <tip_restart_server_2>If You want to apply any settings, always push Restart Icecast buton after Save button - this will restart Icecast server with new settings.</tip_restart_server_2>
         <placeholder_address>server adress or ip</placeholder_address>
         <placeholder_port>port</placeholder_port>
         <placeholder_mount>mount-path</placeholder_mount>
         <button_add_new_server>Add Server</button_add_new_server>
+        <button_save_server_settings>Save</button_save_server_settings>
         <relay_table_delete>D</relay_table_delete>
         <relay_table_adress>Adress</relay_table_adress>
         <relay_table_port>Port</relay_table_port>
@@ -60,7 +74,11 @@
         <relay_table_local_path_title>local Path</relay_table_local_path_title>
         <relay_table_on_demand_title>On demand</relay_table_on_demand_title>
         <relay_table_meta_title>Meta data</relay_table_meta_title>
+        <relay_list_has_no_items>No servers found.</relay_list_has_no_items>
+        <relay_title_delete>delete server</relay_title_delete>
     </configuration>
+    <icestation>
+    </icestation>
     <playlist>
     </playlist>
     <mainlog>

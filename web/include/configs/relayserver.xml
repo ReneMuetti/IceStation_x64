@@ -1,33 +1,5 @@
 <?xml version="1.0"?>
 <relayserver>
-	<server_273744>
-		<name>11</name>
-		<port>11</port>
-		<mount>2121231</mount>
-		<demand>1</demand>
-		<meta>1</meta>
-	</server_273744>
-	<server_305212>
-		<name>11</name>
-		<port>11</port>
-		<mount>2121231</mount>
-		<demand>1</demand>
-		<meta>1</meta>
-	</server_305212>
-	<server_852309>
-		<name>11</name>
-		<port>11</port>
-		<mount>2121231</mount>
-		<demand>1</demand>
-		<meta>1</meta>
-	</server_852309>
-	<server_602627>
-		<name>11</name>
-		<port>11</port>
-		<mount>2121231</mount>
-		<demand>1</demand>
-		<meta>1</meta>
-	</server_602627>
 	<server_263404>
 		<name>11</name>
 		<port>11</port>
@@ -35,4 +7,18 @@
 		<demand>1</demand>
 		<meta>1</meta>
 	</server_263404>
+	<server_525470>
+		<name>127.0.0.1</name>
+		<port>80</port>
+		<mount>test</mount>
+		<demand>1</demand>
+		<meta>0</meta>
+	</server_525470>
+	<server_411464>
+		<name>255.255.225.0</name>
+		<port>8000</port>
+		<mount>blabla</mount>
+		<demand>0</demand>
+		<meta>1</meta>
+	</server_411464>
 </relayserver>

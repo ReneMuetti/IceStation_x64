@@ -171,7 +171,7 @@ class Registry
 	 */
 	function fetch_xml()
 	{
-	    $this -> user_config = read_xml(CONF_PATH . '/custom_config.xml');
+	    $this -> user_config = read_xml( $this -> config['userconfig'] );
 	    $this -> user_lang   = read_xml( $this -> config['base_path'] . '/language/' . $this -> user_config['language'] . '.xml' );
 	    $this -> icecast     = read_xml( $this -> config['icecast'] );
 	    $this -> ices0       = read_xml( $this -> config['ices0'] );

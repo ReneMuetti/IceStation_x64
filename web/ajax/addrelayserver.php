@@ -35,7 +35,7 @@ if ( strlen($site -> GPC['name']) AND !empty($site -> GPC['port']) AND strlen($s
     $saved_servers['server_' . $localmount] = array(
                                                   'name'   => $site -> GPC['name'],
                                                   'port'   => $site -> GPC['port'],
-                                                  'mount'  => $site -> GPC['mount'],
+                                                  'mount'  => str_replace('/', '', $site -> GPC['mount']),
                                                   'demand' => $site -> GPC['demand'],
                                                   'meta'   => $site -> GPC['meta'],
                                               );
@@ -43,7 +43,7 @@ if ( strlen($site -> GPC['name']) AND !empty($site -> GPC['port']) AND strlen($s
     $xml_content  = buildRelayServers($saved_servers);
     $write_result = write_xml($site -> config['relayserver'], $xml_content);
 
-    $result['message'] = print_r($saved_servers, TRUE) . "\n\n" . $write_error . "\n\n" . $xml_content;
+    $result['message'] = $localmount;
 }
 else {
     $result['error'] = true;

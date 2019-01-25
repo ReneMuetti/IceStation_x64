@@ -35,6 +35,7 @@ $config['func_path']  = FUNC_PATH;
 
 // Relay-Server
 $config['relayserver'] = CONF_PATH . '/relayserver.xml';
+$config['userconfig']  = CONF_PATH . '/custom_config.xml';
 
 /**
  * Class-Loader

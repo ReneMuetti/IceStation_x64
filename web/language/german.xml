@@ -8,6 +8,19 @@
         <ajax_new_relay_no_name>- es wurde kein Name angegeben</ajax_new_relay_no_name>
         <ajax_new_relay_no_port>- es wurde kein Port angegeben</ajax_new_relay_no_port>
         <ajax_new_relay_no_mount>- es wurde kein Mount-Pfad angegeben</ajax_new_relay_no_mount>
+        <ajax_delete_relay_param_error>Parameterfehler beim Löschen</ajax_delete_relay_param_error>
+        <ajax_delete_relay_found_error>Der Server wurde nicht gefunden</ajax_delete_relay_found_error>
+        <status_yes>Ja</status_yes>
+        <status_no>Nein</status_no>
+        <ajax_configuration_no_port>- es wurde kein Port angegeben</ajax_configuration_no_port>
+        <ajax_configuration_no_password>- es wurde kein Passwort angegeben</ajax_configuration_no_password>
+        <ajax_configuration_no_ices0_name>- es wurde kein Name für den Ices0 angegeben</ajax_configuration_no_ices0_name>
+        <ajax_configuration_no_ices0_genre>- es wurde kein Genre für den Ices0 angegeben</ajax_configuration_no_ices0_genre>
+        <ajax_configuration_no_ices0_url>- es wurde keine Adresse für den Ices0 angegeben</ajax_configuration_no_ices0_url>
+        <ajax_configuration_ices0_bitrate_error>- es wurde keine gültige Bitrate für den Ices0 angegeben</ajax_configuration_ices0_bitrate_error>
+        <ajax_configuration_ices0_channel_error>- es wurden keine Kanäle für den Ices0 angegeben</ajax_configuration_ices0_channel_error>
+        <ajax_configuration_ices0_channel_not_even>- es muß eine gerade Anzhal für die Kanäle angegeben werden</ajax_configuration_ices0_channel_not_even>
+        <ajax_error_write_file>die folgende Datei konnte nicht geschrieben werden:</ajax_error_write_file>
     </global>
     <navbar>
         <configuration>Einstellungen</configuration>
@@ -38,14 +51,15 @@
         <tip_port>Gib die Portnummer ein, welche für eingehende und ausgehende Verbindungen geöffnet wird.</tip_port>
         <tip_password>Setzt das Passwort für den Admin-Benutzer (Icecast Web Service) und zur Autorisierung von Stream-Quellen.</tip_password>
         <tip_ices0>Ices0 ist ein lokales MP3-Streaming-Programm. Wenn es aktiviert ist, kann der Benutzer die Lieblings-MP3-Musiksammlung von überall her hören. Aus der Playlist generierte Musik wird vom Icecast-Server übertragen.</tip_ices0>
-        <tip_reencode>Benutze diese Funktion nicht bei einer TS-109/209/209/409 Serie (langsamere CPU).</tip_reencode>
+        <tip_reencode>Benutze diese Funktion nicht bei einer TS-109/209/409 Serie (langsamere CPU).</tip_reencode>
         <title_server_descr>IceStation Serverbeschreibung eintragen</title_server_descr>
-        <tip_restart_server_1>Wenn alle Einstellungen korrekt sind, drücke einfach den Speichern-Button, um alle Einstellungen zu speichern. Die Schaltfläche Speichern startet den Icecast-Server nicht neu, so dass noch immer nicht alle Einstellungen übernommen werden.</tip_restart_server_1>
-        <tip_restart_server_2>Um Einstellungen zu übernehmen, klicke auf die Schaltfläche Neustart Icecast aber immer erst nach dem Speichern - dadurch wird der Icecast-Server mit den neuen Einstellungen gestartet.</tip_restart_server_2>
+        <tip_restart_server_1>Wenn alle Einstellungen korrekt sind, drücke einfach den Server hinzufügen Button, um den Relay-Server zu speichern. Die Schaltfläche Speichern startet den Icecast-Server nicht neu, so dass nicht alle Einstellungen übernommen werden.</tip_restart_server_1>
+        <tip_restart_server_2>Um alle Einstellungen zu übernehmen, klicke auf die Schaltfläche Neustart Icecast aber immer erst nach dem Speichern - dadurch wird der Icecast-Server mit den neuen Einstellungen gestartet.</tip_restart_server_2>
         <placeholder_address>Serveradresse oder IP</placeholder_address>
         <placeholder_port>Port</placeholder_port>
         <placeholder_mount>Mount-Pfad</placeholder_mount>
         <button_add_new_server>Server hinzufügen</button_add_new_server>
+        <button_save_server_settings>Speichern</button_save_server_settings>
         <relay_table_delete>D</relay_table_delete>
         <relay_table_adress>Adresse</relay_table_adress>
         <relay_table_port>Port</relay_table_port>
@@ -60,6 +74,8 @@
         <relay_table_local_path_title>Lokaler Pfad</relay_table_local_path_title>
         <relay_table_on_demand_title>On-demand</relay_table_on_demand_title>
         <relay_table_meta_title>Meta-data</relay_table_meta_title>
+        <relay_list_has_no_items>Es wurden keine Server gefunden.</relay_list_has_no_items>
+        <relay_title_delete>Server löschen</relay_title_delete>
     </configuration>
     <icestation>
     </icestation>

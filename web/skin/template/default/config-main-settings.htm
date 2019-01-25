@@ -1,4 +1,5 @@
 <div class="col-content">
+    <script type="text/javascript" src="<var_config baseurl />/skin/js/serversettings.js"></script>
     <img src="<var_config baseurl />/skin/images/default/bigtab-main-settings.png" class="big-tabs" />
     <div id="config-setting-icecast" class="block-horizontal-spacer">
         <div class="input-label input-description">
@@ -79,5 +80,9 @@
             <label for="ices0-channels"><lang configuration_label_ices0_channels /></label>
             <input type="text" name="ices0_channels" id="ices0-channels" value="<var ices0_channels />" />
         </div>
+    </div>
+
+    <div id="server-save-settings" class="block-horizontal-spacer">
+        <button class="toggle-red" onclick="saveServerSettings()"><lang configuration_button_save_server_settings /></button>
     </div>
 </div>

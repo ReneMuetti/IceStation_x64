@@ -25,8 +25,16 @@
 
         <script type="text/javascript">
             var baseurl = '<var_config baseurl />';
+            var protokoll = '<var_config protocol />';
+            var station_host = '<var_config host />';
+            var station_server = '<var_config server_name />';
+            var station_port = '<var_config server_port />';
+            var skin = '<var_user_config skin />';
             var str_ajax_failed = '<lang global_ajax_failed />';
             var str_ajax_success = '<lang global_ajax_success />';
+            var str_status_yes = '<lang global_status_yes />';
+            var str_status_no = '<lang global_status_no />';
+            var str_relay_title_delete = '<lang configuration_relay_title_delete />';
         </script>
 
         <base href="<var_config baseurl />" />
@@ -50,7 +58,7 @@
                     <span id="stream-url">
                         <var_config server_name />:<var_icecast port />
                     </span>
-                    <a href="http://<var_ices0 url />:<var_icecast port /><var_icecast mount />" title="<lang configuration_tip_start_stream />" id="play-stream">&nbsp;</a>
+                    <a href="http://<var ices0_url />:<var_icecast port /><var_icecast mount />" title="<lang configuration_tip_start_stream />" id="play-stream">&nbsp;</a>
                     <img src="<var_config baseurl />/skin/images/default/window_menu_right_right_border.png" id="navbar-right-right-border" />
                 </div>
             </div>

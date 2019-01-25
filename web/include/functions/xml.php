@@ -74,4 +74,52 @@ function buildRelayServers($xml_data = null)
         return $xml -> output();
     }
 }
+
+function buildXmlConfig($xml_data = null, $rootElem = '', $rootParam = null)
+{
+    global $site;
+
+    if ( !count($xml_data) ) {
+        return false;
+    }
+    else {
+         $xml = new XML_Builder($site, CHARSET);
+
+         if ( strlen($rootElem) ) {
+            $xml -> add_group($rootElem, $rootParam);
+         }
+         makeXmlContent($xml, $xml_data);
+         if ( strlen($rootElem) ) {
+            $xml -> close_group();
+         }
+
+         $output = $xml -> output();
+         unset($xml);
+         return $output;
+    }
+}
+
+function makeXmlContent( &$Builder, $xml_data )
+{
+    foreach( $xml_data AS $key => $value ) {
+        if ( is_array($value) ) {
+            $Builder -> add_group($key);
+
+            foreach( $value AS $value_key => $value_param ) {
+                if ( is_array($value_param) ) {
+                    $Builder -> add_group($value_key);
+                    makeXmlContent($Builder, $value_param);
+                    $Builder -> close_group();
+                }
+                else {
+                    $Builder -> add_tag($value_key, $value_param);
+                }
+            }
+            $Builder -> close_group();
+        }
+        elseif ( is_string($value) ) {
+            $Builder -> add_tag($key, $value);
+        }
+    }
+}
 ?>

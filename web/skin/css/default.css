@@ -13,7 +13,7 @@ body {
 button {
     border: none;
     border-radius: 8px;
-    height: 36px;
+    height: 32px;
     min-width: 110px;
     width: auto;
     padding: 0 10px;
@@ -22,7 +22,7 @@ button {
     background-image: url('../images/default/button_set.png');
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-position: 0 -1px;
+    background-position: 0 0;
     background-color: transparent;
 }
 button.toggle-blue:hover {
@@ -32,7 +32,7 @@ button.toggle-yellow:hover {
     background-position: 0 -78px;
 }
 button.toggle-red:hover {
-    background-position: 0 -116.5px;
+    background-position: 0 -102px;
 }
 
 /* Default-Design für Label-Input-Combination */
@@ -463,6 +463,10 @@ input[type="text"]:active, input[type="text"]:focus {
 label#recode-label {
     width: 200px;
 }
+#server-save-settings > button {
+    float: right;
+    display: inline-block;
+}
 
 #new-server-selections > * {
     display: inline-block;
@@ -485,5 +489,13 @@ label#recode-label {
 }
 #relay-list table thead{
     background-color: #b3b7bd;
+    text-align: center;
+}
+#relay-table tbody td {
+    background-color: #bec2c7;
+}
+#relay-table tbody td:first-child,
+#relay-table tbody td:nth-child(6),
+#relay-table tbody td:nth-child(7) {
     text-align: center;
 }
