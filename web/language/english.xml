@@ -34,6 +34,8 @@
         <iceslog>Show Ices Log</iceslog>
     </navbar>
     <configuration>
+        <bigtab_configuration>Main settings</bigtab_configuration>
+        <bigtab_relayserver>Relay servers</bigtab_relayserver>
         <label_icecast_port>Port</label_icecast_port>
         <label_icecast_password>Password</label_icecast_password>
         <label_ices0_start>Start Ices0 service</label_ices0_start>
@@ -82,6 +84,7 @@
         <relay_title_delete>delete server</relay_title_delete>
     </configuration>
     <icestation>
+        <bigtab_configuration>Settings</bigtab_configuration>
         <label_skin>Skin</label_skin>
         <label_language>Language</label_language>
         <label_charset>Charset</label_charset>

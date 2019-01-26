@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <user_config>
 	<skin>default</skin>
-	<language>german</language>
+	<language>deutsch</language>
 	<output_charset>ISO8859-1</output_charset>
 	<output_iso_charset>ISO-8859-1</output_iso_charset>
 	<start_ices0_service>1</start_ices0_service>

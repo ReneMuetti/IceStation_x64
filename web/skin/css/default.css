@@ -36,7 +36,41 @@ button.toggle-red:hover {
     background-position: 0 -102px;
 }
 
-/* Default-Design für Label-Input-Combination */
+/* Default-Design for Big-Tab */
+div.big-tab {
+    min-width: 250px;
+    height: 66px;
+    display: inline-block;
+    margin-bottom: 12px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-image: url('../images/default/bigtab-set.png');
+    background-repeat: no-repeat;
+    background-size: 100% 205px;
+}
+div.big-tab:after {
+    display: block;
+}
+div.big-tab-settings {
+    background-position: 0 0;
+}
+div.big-tab-server {
+    background-position: 0 -68px;
+}
+div.big-tab-list {
+    background-position: 0 -136px;
+}
+div.big-tab > span {
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 15px;
+    margin-right: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Default-Design for Label-Input-Combination */
 div.input-label, div.checkbox-label, div.input-dropdown {
     font-size: 0;
 }
@@ -116,6 +150,11 @@ div.checkbox-label > input[type="checkbox"]:checked + span.checkbox-image {
 }
 div.input-dropdown > select {
 }
+div.input-dropdown > select > option  {
+    background-color: #8595A3;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+}
+
 div.input-dropdown > label {
 }
 
@@ -135,10 +174,7 @@ input[type="text"]:active, input[type="text"]:focus {
 .white-shadow {
     box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
 }
-.big-tabs {
-    display: block;
-    margin-bottom: 12px;
-}
+
 .col-content {
     height: 100%;
     margin: 0 30px;
