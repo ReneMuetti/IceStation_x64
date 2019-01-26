@@ -2,4 +2,32 @@
     <div class="big-tab big-tab-list">
         <span><lang playlist_bigtab_playlist /></span>
     </div>
+    <div id="playlist-jump-next">
+        <button class="toggle-yellow"><lang playlist_button_jump_next /></button>
+    </div>
+
+    <div id="playlist-directory" class="table-container white-shadow block-horizontal-spacer">
+        <script type="text/javascript" src="<var_config baseurl />/skin/js/playlistdirectory.js"></script>
+        <div class="input-label left-position input-long">
+            <label for="playlist-path"><lang playlist_label_path /></label>
+            <input type="text" name="playlist_path" id="playlist-path" value="<var playlist_path />" />
+        </div>
+        <table id="directory-table">
+            <colgroup>
+                <col style="width:30px;" />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th title="<lang playlist_table_name_title />"><lang playlist_table_name /></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="info-tip">
+        <lang playlist_tip_directory_list />
+    </div>
 </div>

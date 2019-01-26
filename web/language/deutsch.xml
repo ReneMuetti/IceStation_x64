@@ -93,6 +93,12 @@
     </icestation>
     <playlist>
         <bigtab_playlist>Titel-Liste</bigtab_playlist>
+        <button_jump_next>zum nächsten Titel</button_jump_next>
+        <tip_directory_list>Wählen Sie die zu gewünschte Musikdatei oder das Verzeichnis und klicken Sie auf die blaue Pfeiltaste. MP3-Dateien werden dann in die Liste "On-The-Go" aufgenommen.</tip_directory_list>
+        <label_path>Pfad</label_path>
+        <label_playlist>Titel-Liste</label_playlist>
+        <table_name>Name</table_name>
+        <table_name_title>Name</table_name_title>
     </playlist>
     <mainlog>
     </mainlog>

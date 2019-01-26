@@ -26,6 +26,7 @@ $navbar = $renderer -> renderTemplate();
 
 // left Col (Playlist-Generator-Directory)
 $renderer -> loadTemplate('playlist-directory.htm');
+    $renderer -> setVariable('playlist_path', '');
 $left_col = $renderer -> renderTemplate();
 
 // right Col (Playlist-Generator-Content)

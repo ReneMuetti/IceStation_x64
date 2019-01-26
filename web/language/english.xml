@@ -92,6 +92,13 @@
         <button_save_settings>save Settings</button_save_settings>
     </icestation>
     <playlist>
+        <bigtab_playlist>Playlist gemerator</bigtab_playlist>
+        <button_jump_next>Jump to next</button_jump_next>
+        <label_path>Path</label_path>
+        <tip_directory_list>Choose music file or directory to scan and click blue arrow button. MP3 files will be added to the list “On-The-Go”.</tip_directory_list>
+        <label_playlist>Playlist</label_playlist>
+        <table_name>Name</table_name>
+        <table_name_title>Name</table_name_title>
     </playlist>
     <mainlog>
     </mainlog>
