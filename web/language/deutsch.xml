@@ -28,8 +28,8 @@
     </global>
     <navbar>
         <configuration>Einstellungen</configuration>
-        <icestation>Ice Station</icestation>
-        <playlist>Playlist</playlist>
+        <icestation>IceStation</icestation>
+        <playlist>Titel-Liste</playlist>
         <mainlog>Icecast-LOG</mainlog>
         <iceslog>Ices-LOG</iceslog>
     </navbar>
