@@ -2,14 +2,14 @@
     <script type="text/javascript" src="<var_config baseurl />/skin/js/serversettings.js"></script>
     <img src="<var_config baseurl />/skin/images/default/bigtab-main-settings.png" class="big-tabs" />
     <div id="config-setting-icecast" class="block-horizontal-spacer">
-        <div class="input-label input-description">
+        <div class="input-label left-position input-description">
             <label for="icecast-port"><lang configuration_label_icecast_port /></label>
             <input type="text" name="icecast_port" id="icecast-port" value="<var icecast_port />" />
             <span class="info-tip">
                 <lang configuration_tip_port />
             </span>
         </div>
-        <div class="input-label input-description">
+        <div class="input-label left-position input-description">
             <label for="icecast-password"><lang configuration_label_icecast_password /></label>
             <input type="text" name="icecast_password" id="icecast-password" value="<var icecast_password />" />
             <span class="info-tip">
@@ -38,19 +38,19 @@
         <div class="info-tip" id="ices0-tip">
             <lang configuration_title_server_descr />
         </div>
-        <div class="input-label input-long">
+        <div class="input-label left-position input-long">
             <label for="ices0-name"><lang configuration_label_ices0_name /></label>
             <input type="text" name="ices0_name" id="ices0-name" value="<var ices0_name />" />
         </div>
-        <div class="input-label input-long">
+        <div class="input-label left-position input-long">
             <label for="ices0-genre"><lang configuration_label_ices0_genre /></label>
             <input type="text" name="ices0_genre" id="ices0-genre" value="<var ices0_genre />" />
         </div>
-        <div class="input-label input-long">
+        <div class="input-label left-position input-long">
             <label for="ices0-descr"><lang configuration_label_ices0_descr /></label>
             <input type="text" name="ices0_descr" id="ices0-descr" value="<var ices0_desc />" />
         </div>
-        <div class="input-label input-long">
+        <div class="input-label left-position input-long">
             <label for="ices0-url"><lang configuration_label_ices0_url /></label>
             <input type="text" name="ices0_url" id="ices0-url" value="<var ices0_url />" />
         </div>
@@ -72,17 +72,17 @@
             <span id="img-enable-recode" class="checkbox-image"></span>
             <label for="enable-recode" id="recode-label"><lang configuration_label_enable_recode /></label>
         </div>
-        <div class="input-label">
+        <div class="input-label left-position">
             <label for="ices0-bitrate"><lang configuration_label_ices0_bitrate /></label>
             <input type="text" name="ices0_bitrate" id="ices0-bitrate" value="<var ices0_bitrate />" />
         </div>
-        <div class="input-label">
+        <div class="input-label left-position">
             <label for="ices0-channels"><lang configuration_label_ices0_channels /></label>
             <input type="text" name="ices0_channels" id="ices0-channels" value="<var ices0_channels />" />
         </div>
     </div>
 
-    <div id="server-save-settings" class="block-horizontal-spacer">
+    <div id="server-save-settings" class="block-horizontal-spacer save-button">
         <button class="toggle-red" onclick="saveServerSettings()"><lang configuration_button_save_server_settings /></button>
     </div>
 </div>

@@ -21,6 +21,10 @@
         <ajax_configuration_ices0_channel_error>- es wurden keine Kanäle für den Ices0 angegeben</ajax_configuration_ices0_channel_error>
         <ajax_configuration_ices0_channel_not_even>- es muß eine gerade Anzhal für die Kanäle angegeben werden</ajax_configuration_ices0_channel_not_even>
         <ajax_error_write_file>die folgende Datei konnte nicht geschrieben werden:</ajax_error_write_file>
+        <ajax_icestation_skin_error>- der angegebene Skin existiert nicht</ajax_icestation_skin_error>
+        <ajax_icestation_lang_error>- die angegebene Sprache existiert nicht</ajax_icestation_lang_error>
+        <ajax_icestation_charset_error>- es wurde kein Zeichensatz angegeben</ajax_icestation_charset_error>
+        <ajax_icestation_isocharset_error>- es wurde kein ISO-Zeichensatz angegeben</ajax_icestation_isocharset_error>
     </global>
     <navbar>
         <configuration>Einstellungen</configuration>
@@ -78,6 +82,11 @@
         <relay_title_delete>Server löschen</relay_title_delete>
     </configuration>
     <icestation>
+        <label_skin>Skin</label_skin>
+        <label_language>Sprache</label_language>
+        <label_charset>Zeichensatz</label_charset>
+        <label_iso_charset>ISO Zeichensatz</label_iso_charset>
+        <button_save_settings>Einstellungen speichern</button_save_settings>
     </icestation>
     <playlist>
     </playlist>

@@ -21,6 +21,10 @@
         <ajax_configuration_ices0_channel_error>- no channels were specified for the Ices0</ajax_configuration_ices0_channel_error>
         <ajax_configuration_ices0_channel_not_even>- an even number must be specified for the channels</ajax_configuration_ices0_channel_not_even>
         <ajax_error_write_file>the following file could not be written:</ajax_error_write_file>
+        <ajax_icestation_skin_error>- the specified skin does not exist</ajax_icestation_skin_error>
+        <ajax_icestation_lang_error>- the specified language does not exist</ajax_icestation_lang_error>
+        <ajax_icestation_charset_error>- no charset was specified</ajax_icestation_charset_error>
+        <ajax_icestation_isocharset_error>- no iso-charset was specified</ajax_icestation_isocharset_error>
     </global>
     <navbar>
         <configuration>Configuration</configuration>
@@ -78,6 +82,11 @@
         <relay_title_delete>delete server</relay_title_delete>
     </configuration>
     <icestation>
+        <label_skin>Skin</label_skin>
+        <label_language>Language</label_language>
+        <label_charset>Charset</label_charset>
+        <label_iso_charset>ISO-Charset</label_iso_charset>
+        <button_save_settings>save Settings</button_save_settings>
     </icestation>
     <playlist>
     </playlist>

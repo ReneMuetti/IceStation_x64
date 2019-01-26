@@ -9,6 +9,8 @@ require_once './global.php';
 // ######################## START MAIN SCRIPT ############################
 // #######################################################################
 $renderer = new Templater();
+$skins    = new Skins();
+$langs    = new Language();
 
 // Navbar
 $renderer -> loadTemplate('navbar.htm');
@@ -25,7 +27,12 @@ $renderer -> loadTemplate('navbar.htm');
 $navbar = $renderer -> renderTemplate();
 
 // left Col ()
-$left_col = '';
+$renderer -> loadTemplate('icestation-config.htm');
+    $renderer -> setVariable('icestation_skinlist'   , $skins -> getSkinOptions($site -> user_config['skin']));
+    $renderer -> setVariable('icestation_langlist'   , $langs -> getLangOptions($site -> user_config['language']));
+    $renderer -> setVariable('icestation_charset'    , $site -> user_config['output_charset']);
+    $renderer -> setVariable('icestation_iso_charset', $site -> user_config['output_iso_charset']);
+$left_col = $renderer -> renderTemplate();
 
 // right Col ()
 $right_col = '';

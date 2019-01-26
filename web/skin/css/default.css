@@ -21,44 +21,48 @@ button {
     color: #FFFFFF;
     background-image: url('../images/default/button_set.png');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% 134px;
     background-position: 0 0;
     background-color: transparent;
+    cursor: pointer;
 }
 button.toggle-blue:hover {
-    background-position: 0 -40px;
+    background-position: 0 -34px;
 }
 button.toggle-yellow:hover {
-    background-position: 0 -78px;
+    background-position: 0 -68px;
 }
 button.toggle-red:hover {
     background-position: 0 -102px;
 }
 
 /* Default-Design für Label-Input-Combination */
-div.input-label > label {
+div.input-label, div.checkbox-label, div.input-dropdown {
+    font-size: 0;
+}
+div[class*="input-"] > label {
+    min-width: 110px;
     font-size: 0.8rem;
     font-weight: bold;
     display: inline-block;
-    min-width: 110px;
-    position: relative;
     color: #000000;
+    position: relative;
+    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+    border-style: solid;
+    border-color: #000000;
+}
+div.left-position > label {
     margin: 8px 0;
     padding: 4px 0 4px 4px;
     background-image: url('../images/default/label_background.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     border-width: 1px 0 1px 1px;
-    border-style: solid;
-    border-color: #000000;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
 }
-div.input-label > input[type="text"] {
-    position: relative;
-    margin: 8px 0;
-    padding: 4px 0 4px 8px;
+div.input-label > input[type="text"], div.input-dropdown > select {
+    padding: 3px 0 4px 8px;
     background-color: #cad1d7;
     border-width: 1px 1px 1px 0;
     border-style: solid;
@@ -66,6 +70,13 @@ div.input-label > input[type="text"] {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
+}
+
+div.input-label > input[type="text"] {
+    position: relative;
+    margin: 8px 0;
+}
+div.input-label > label {
 }
 div.checkbox-label > input[type="checkbox"] {
     position: absolute;
@@ -80,18 +91,14 @@ div.checkbox-label > input[type="checkbox"] {
     border:0;
 }
 div.checkbox-label > label {
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #000000;
-    display: inline-block;
-    position: relative;
     margin: 8px 0 8px 8px;
     padding: 4px;
-    border: 1px solid #000000;
+    border-width: 1px;
     border-radius: 3px;
-    box-shadow: 0px 0px 5px 0px rgba(255,255,255,0.75);
     background-color: #cad1d7;
     cursor: pointer;
+    display: inline-block;
+    font-size: 0.8rem;
 }
 div.checkbox-label > span.checkbox-image {
     width: 18px;
@@ -106,6 +113,10 @@ div.checkbox-label > span.checkbox-image {
 }
 div.checkbox-label > input[type="checkbox"]:checked + span.checkbox-image {
     background-position: 0 -18px;
+}
+div.input-dropdown > select {
+}
+div.input-dropdown > label {
 }
 
 input[type="text"]:active, input[type="text"]:focus {
@@ -392,6 +403,11 @@ input[type="text"]:active, input[type="text"]:focus {
 /* Default-Block-Elements */
 .block-horizontal-spacer {
     margin-bottom: 20px;
+    position: relative;
+}
+.save-button {
+    position: absolute;
+    right: 36px;
 }
 
 .input-description, .input-long, .checkbox-label {
@@ -464,7 +480,6 @@ label#recode-label {
     width: 200px;
 }
 #server-save-settings > button {
-    float: right;
     display: inline-block;
 }
 
@@ -498,4 +513,11 @@ label#recode-label {
 #relay-table tbody td:nth-child(6),
 #relay-table tbody td:nth-child(7) {
     text-align: center;
+}
+
+#icestation-config label {
+    width: 150px;
+}
+#icestation-config input, #icestation-config select {
+    width: calc(50% - 150px);
 }

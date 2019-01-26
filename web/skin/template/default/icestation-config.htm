@@ -1,0 +1,25 @@
+<div class="col-content">
+    <script type="text/javascript" src="<var_config baseurl />/skin/js/icestationsettings.js"></script>
+    <div id="icestation-config" class="block-horizontal-spacer">
+        <div class="input-dropdown left-position">
+            <label for="icestation-skin"><lang icestation_label_skin /></label>
+            <select id="icestation-skin" name="icestation_skin"><var icestation_skinlist /></select>
+        </div>
+        <div class="input-dropdown left-position">
+            <label for="icestation-language"><lang icestation_label_language /></label>
+            <select id="icestation-language" name="icestation_language"><var icestation_langlist /></select>
+        </div>
+        <div class="input-label left-position">
+            <label for="icestation-charset"><lang icestation_label_charset /></label>
+            <input type="text" name="icestation_charset" id="icestation-charset" value="<var icestation_charset />" />
+        </div>
+        <div class="input-label left-position">
+            <label for="icestation-iso-charset"><lang icestation_label_iso_charset /></label>
+            <input type="text" name="icestation_iso_charset" id="icestation-iso-charset" value="<var icestation_iso_charset />" />
+        </div>
+    </div>
+
+    <div id="icestation-save-settings" class="block-horizontal-spacer save-button">
+        <button class="toggle-red" onclick="saveIcestationSettings()"><lang icestation_button_save_settings /></button>
+    </div>
+</div>

@@ -26,7 +26,9 @@ define ('SAPI_NAME' , php_sapi_name() );
  */
 $config['charset']   = CHARSET;
 $config['baseurl']   = BASE_URL;
+$config['skins']     = $config['base_path'] . '/skin';
 $config['templates'] = $config['base_path'] . '/skin/template';
+$config['languages'] = $config['base_path'] . '/language';
 
 $config['inc_path']   = INC_PATH;
 $config['conf_path']  = CONF_PATH;
