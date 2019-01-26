@@ -189,6 +189,7 @@ class Templater
         $this -> vars['<var_config server_addr />']  = $this -> registry -> config['server_addr'];
         $this -> vars['<var_config server_name />']  = $this -> registry -> config['server_name'];
         $this -> vars['<var_config server_port />']  = $this -> registry -> config['server_port'];
+        $this -> vars['<var_config gui_version />']  = file_get_contents($this -> registry -> config['inc_path'] . '/version.txt');
 
         foreach( $this -> registry -> user_config AS $key => $value ) {
             $this -> vars['<var_user_config ' . $key . ' />'] = $value;
@@ -221,10 +222,11 @@ class Templater
      */
     private function _fetch_icecast()
     {
-        $this -> vars['<var_icecast mount />']  = $this -> registry -> icecast['listen-socket']['shoutcast-mount'];
-        $this -> vars['<var_icecast server />'] = $this -> registry -> icecast['server-id'];
-        $this -> vars['<var_icecast status />'] = $this -> registry -> icecast['paths']['alias']['dest'];
-        $this -> vars['<var_icecast port />']   = $this -> registry -> icecast['listen-socket']['port'];
+        $this -> vars['<var_icecast mount />']   = $this -> registry -> icecast['listen-socket']['shoutcast-mount'];
+        $this -> vars['<var_icecast server />']  = $this -> registry -> icecast['server-id'];
+        $this -> vars['<var_icecast version />'] = substr($this -> registry -> icecast['server-id'], 8 );
+        $this -> vars['<var_icecast status />']  = $this -> registry -> icecast['paths']['alias']['dest'];
+        $this -> vars['<var_icecast port />']    = $this -> registry -> icecast['listen-socket']['port'];
     }
 
     /**
