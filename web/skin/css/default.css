@@ -54,11 +54,11 @@ div.big-tab:after {
 div.big-tab-settings {
     background-position: 0 0;
 }
-div.big-tab-server {
-    background-position: 0 -68px;
-}
 div.big-tab-list {
-    background-position: 0 -136px;
+    background-position: 0 -69px;
+}
+div.big-tab-server {
+    background-position: 0 -137px;
 }
 div.big-tab > span {
     display: inline-block;
