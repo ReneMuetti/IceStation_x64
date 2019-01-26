@@ -4,6 +4,7 @@
 	<language>deutsch</language>
 	<output_charset>ISO8859-1</output_charset>
 	<output_iso_charset>ISO-8859-1</output_iso_charset>
+	<media_extensions>mp3,ogg,wav</media_extensions>
 	<start_ices0_service>1</start_ices0_service>
 	<play_ranomized>0</play_ranomized>
 </user_config>

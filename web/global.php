@@ -30,6 +30,9 @@ $config['skins']     = $config['base_path'] . '/skin';
 $config['templates'] = $config['base_path'] . '/skin/template';
 $config['languages'] = $config['base_path'] . '/language';
 
+// Multimedia-Settings
+$config['multimedia_root'] = realpath('/share/Multimedia');
+
 $config['inc_path']   = INC_PATH;
 $config['conf_path']  = CONF_PATH;
 $config['class_path'] = CLASS_PATH;

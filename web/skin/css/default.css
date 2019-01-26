@@ -46,6 +46,7 @@ button.toggle-red:hover {
     background-color: #cad1d7;
     color: #1d232b;
     width: 99.2%;
+    overflow-y: auto;
 }
 /* Default-Design for Big-Tab */
 div.big-tab {
@@ -180,7 +181,45 @@ input[type="text"]:active, input[type="text"]:focus {
     font-size: 0.9rem;
 }
 
-/* */
+/* Playlist */
+.playlist-inline-symbol {
+    width: 20px;
+    height: 15px;
+    margin-left: 8px;
+    display: inline-block;
+    background-image: url('../images/default/directory-set.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.playlist-type-parent {
+    background-position: 0 -53px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+.playlist-add {
+    background-position: 0 -24px;
+    cursor: pointer;
+}
+.playlist-filename {
+    cursor: pointer;
+}
+.playlist-filename:hover, .playlist-filename:active, .playlist-filename:focus {
+    text-decoration: underline;
+}
+.playlist-type-dir {
+    height: 11px;
+    position: relative;
+    top: 2px;
+}
+.playlist-type-file {
+    background-position: 0 -38px;
+}
+.playlist-type-nomedia {
+    background-position: 0 15px;
+}
+
+/* Default-Table */
 table {
     margin: 5px;
     width: calc(100% - 10px);
@@ -194,9 +233,10 @@ thead th {
 }
 tbody td {
     background-color: #bec2c7;
+    vertical-align: middle;
 }
 
-
+/* Schaddow */
 .shaddow-base {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
 }

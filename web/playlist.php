@@ -9,6 +9,7 @@ require_once './global.php';
 // ######################## START MAIN SCRIPT ############################
 // #######################################################################
 $renderer = new Templater();
+$listener = new DirectoryLister( $site -> config['multimedia_root'] );
 
 // Navbar
 $renderer -> loadTemplate('navbar.htm');
@@ -26,7 +27,8 @@ $navbar = $renderer -> renderTemplate();
 
 // left Col (Playlist-Generator-Directory)
 $renderer -> loadTemplate('playlist-directory.htm');
-    $renderer -> setVariable('playlist_path', '');
+    $renderer -> setVariable('playlist_path'     , '.' . DIRECTORY_SEPARATOR);
+    $renderer -> setVariable('default_dirlisting', $listener -> getCurrentDirectory());
 $left_col = $renderer -> renderTemplate();
 
 // right Col (Playlist-Generator-Content)
@@ -43,7 +45,7 @@ $content = $renderer -> renderTemplate();
 $renderer -> loadTemplate('page.htm');
     $renderer -> setVariable('page_content', $content);
     $renderer -> setVariable('navbar'      , $navbar);
+    $renderer -> renderDebugOutput($listener);
     $renderer -> renderDebugOutput($site);
-    $renderer -> renderDebugOutput($renderer);
 print_output($renderer -> renderTemplate());
 ?>

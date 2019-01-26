@@ -13,7 +13,8 @@ $site -> input -> clean_array_gpc('p', array(
                                      'skin'       => TYPE_NOHTML,
                                      'language'   => TYPE_NOHTML,
                                      'charset'    => TYPE_NOHTML,
-                                     'isocharset' => TYPE_NOHTML
+                                     'isocharset' => TYPE_NOHTML,
+                                     'mediaext'   => TYPE_NOHTML
                                  ));
 
 $result = array(
@@ -45,6 +46,10 @@ if ( !strlen($site -> GPC['isocharset']) ) {
     $result['error'] = true;
     $result['code']  = output_string($site -> user_lang['global']['ajax_icestation_isocharset_error'], false);
 }
+if ( !strlen($site -> GPC['mediaext']) ) {
+    $result['error'] = true;
+    $result['code']  = output_string($site -> user_lang['global']['ajax_icestation_mediaext_error'], false);
+}
 
 if ( $result['error'] == false ) {
     $configUser = read_xml( $site -> config['userconfig'] );
@@ -52,6 +57,7 @@ if ( $result['error'] == false ) {
         $configUser['language']           = $site -> GPC['language'];
         $configUser['output_charset']     = $site -> GPC['charset'];
         $configUser['output_iso_charset'] = $site -> GPC['isocharset'];
+        $configUser['media_extensions']   = $site -> GPC['mediaext'];
         $xmlUser = buildXmlConfig($configUser, 'user_config');
     $errUser = write_xml($site -> config['userconfig'], $xmlUser);
 

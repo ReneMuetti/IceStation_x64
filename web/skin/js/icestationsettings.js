@@ -8,7 +8,8 @@ function saveIcestationSettings()
             'skin'      : $('#icestation-skin').val(),
             'language'  : $('#icestation-language').val(),
             'charset'   : $('#icestation-charset').val(),
-            'isocharset': $('#icestation-iso-charset').val()
+            'isocharset': $('#icestation-iso-charset').val(),
+            'mediaext'  : $('#icestation-media-ext').val()
         },
         'beforeSend': function() {}
     })

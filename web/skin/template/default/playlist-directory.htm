@@ -10,7 +10,7 @@
         <script type="text/javascript" src="<var_config baseurl />/skin/js/playlistdirectory.js"></script>
         <div class="input-label left-position input-long">
             <label for="playlist-path"><lang playlist_label_path /></label>
-            <input type="text" name="playlist_path" id="playlist-path" value="<var playlist_path />" />
+            <input type="text" name="playlist_path" id="playlist-path" value="<var playlist_path />" readonly="readonly" />
         </div>
         <table id="directory-table">
             <colgroup>
@@ -24,6 +24,7 @@
                 </tr>
             </thead>
             <tbody>
+                <var default_dirlisting />
             </tbody>
         </table>
     </div>

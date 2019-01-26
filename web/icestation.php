@@ -32,6 +32,7 @@ $renderer -> loadTemplate('icestation-config.htm');
     $renderer -> setVariable('icestation_langlist'   , $langs -> getLangOptions($site -> user_config['language']));
     $renderer -> setVariable('icestation_charset'    , $site -> user_config['output_charset']);
     $renderer -> setVariable('icestation_iso_charset', $site -> user_config['output_iso_charset']);
+    $renderer -> setVariable('icestation_media_ext'  , $site -> user_config['media_extensions']);
 $left_col = $renderer -> renderTemplate();
 
 // right Col ()

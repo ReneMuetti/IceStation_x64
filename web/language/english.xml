@@ -25,6 +25,8 @@
         <ajax_icestation_lang_error>- the specified language does not exist</ajax_icestation_lang_error>
         <ajax_icestation_charset_error>- no charset was specified</ajax_icestation_charset_error>
         <ajax_icestation_isocharset_error>- no iso-charset was specified</ajax_icestation_isocharset_error>
+        <ajax_icestation_mediaext_error>- no audio extensions were specified (default: mp3,ogg,wav)</ajax_icestation_mediaext_error>
+        <ajax_change_directory_error>The directory could not be read!</ajax_change_directory_error>
     </global>
     <navbar>
         <configuration>Configuration</configuration>
@@ -91,6 +93,7 @@
         <label_language>Language</label_language>
         <label_charset>Charset</label_charset>
         <label_iso_charset>ISO-Charset</label_iso_charset>
+        <label_media_ext>audio formats</label_media_ext>
         <button_save_settings>save Settings</button_save_settings>
     </icestation>
     <playlist>
