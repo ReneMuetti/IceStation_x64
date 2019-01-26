@@ -19,7 +19,7 @@
         <ajax_configuration_no_ices0_url>- es wurde keine Adresse für den Ices0 angegeben</ajax_configuration_no_ices0_url>
         <ajax_configuration_ices0_bitrate_error>- es wurde keine gültige Bitrate für den Ices0 angegeben</ajax_configuration_ices0_bitrate_error>
         <ajax_configuration_ices0_channel_error>- es wurden keine Kanäle für den Ices0 angegeben</ajax_configuration_ices0_channel_error>
-        <ajax_configuration_ices0_channel_not_even>- es muß eine gerade Anzhal für die Kanäle angegeben werden</ajax_configuration_ices0_channel_not_even>
+        <ajax_configuration_ices0_channel_not_even>- die Anzahl für die Kanäle kann nur 1 (Mono) oder 2 (Stereo) sein</ajax_configuration_ices0_channel_not_even>
         <ajax_error_write_file>die folgende Datei konnte nicht geschrieben werden:</ajax_error_write_file>
         <ajax_icestation_skin_error>- der angegebene Skin existiert nicht</ajax_icestation_skin_error>
         <ajax_icestation_lang_error>- die angegebene Sprache existiert nicht</ajax_icestation_lang_error>
@@ -48,6 +48,8 @@
         <label_enable_recode>neu Codieren</label_enable_recode>
         <label_ices0_bitrate>Bitrate</label_ices0_bitrate>
         <label_ices0_channels>Kanäle</label_ices0_channels>
+        <label_ices0_channels_mono>Mono</label_ices0_channels_mono>
+        <label_ices0_channels_stereo>Stereo</label_ices0_channels_stereo>
         <label_new_server_name>Addresse</label_new_server_name>
         <label_new_server_port>Port</label_new_server_port>
         <label_new_server_mount>Mount-Pfad</label_new_server_mount>

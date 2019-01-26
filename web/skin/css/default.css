@@ -506,6 +506,9 @@ tbody td {
 #ices0-tip {
     padding-left: 5px;
 }
+#ices0-channels {
+    width: 112px;
+}
 
 .checkbox-description {
     margin-bottom: 0;

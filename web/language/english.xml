@@ -19,7 +19,7 @@
         <ajax_configuration_no_ices0_url>- no address was specified for the Ices0</ajax_configuration_no_ices0_url>
         <ajax_configuration_ices0_bitrate_error>- no valid bitrate for the Ices0 was specified</ajax_configuration_ices0_bitrate_error>
         <ajax_configuration_ices0_channel_error>- no channels were specified for the Ices0</ajax_configuration_ices0_channel_error>
-        <ajax_configuration_ices0_channel_not_even>- an even number must be specified for the channels</ajax_configuration_ices0_channel_not_even>
+        <ajax_configuration_ices0_channel_not_even>- the number of channels can be only 1 (mono) or 2 (stereo)</ajax_configuration_ices0_channel_not_even>
         <ajax_error_write_file>the following file could not be written:</ajax_error_write_file>
         <ajax_icestation_skin_error>- the specified skin does not exist</ajax_icestation_skin_error>
         <ajax_icestation_lang_error>- the specified language does not exist</ajax_icestation_lang_error>
@@ -48,6 +48,8 @@
         <label_enable_recode>Re-encode</label_enable_recode>
         <label_ices0_bitrate>Bitrate</label_ices0_bitrate>
         <label_ices0_channels>Channels</label_ices0_channels>
+        <label_ices0_channels_mono>mono</label_ices0_channels_mono>
+        <label_ices0_channels_stereo>stereo</label_ices0_channels_stereo>
         <label_new_server_name>Server address</label_new_server_name>
         <label_new_server_port>Port</label_new_server_port>
         <label_new_server_mount>Mount path</label_new_server_mount>

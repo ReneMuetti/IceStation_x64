@@ -9,8 +9,8 @@ require_once './global.php';
 // #######################################################################
 // ######################## START MAIN SCRIPT ############################
 // #######################################################################
-$minBitRate  = 64;
-$minChannels = 2;
+$minBitRate = 64;
+$maxBitRate = 320;
 
 $site -> input -> clean_array_gpc('p', array(
                                      'port'          => TYPE_UINT,
@@ -59,11 +59,7 @@ if ( empty($site -> GPC['bitrateIces0']) OR ( $site -> GPC['bitrateIces0'] < $mi
     $result['error'] = true;
     $errors[] = output_string($site -> user_lang['global']['ajax_configuration_ices0_bitrate_error'], false);
 }
-if ( empty($site -> GPC['channelsIces0']) OR ( $site -> GPC['channelsIces0'] < $minChannels ) ) {
-    $result['error'] = true;
-    $errors[] = output_string($site -> user_lang['global']['ajax_configuration_ices0_channel_error'], false);
-}
-if( $site -> GPC['channelsIces0'] % 2 != 0 ) {
+if ( empty($site -> GPC['channelsIces0']) OR ( $site -> GPC['channelsIces0'] < 1 ) OR ( $site -> GPC['channelsIces0'] > 2 ) ) {
     $result['error'] = true;
     $errors[] = output_string($site -> user_lang['global']['ajax_configuration_ices0_channel_error'], false);
 }
