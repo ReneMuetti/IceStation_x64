@@ -60,14 +60,24 @@ class Templater
     {
         $full_path = $this -> registry -> config['templates'] . '/' . $this -> registry -> user_config['skin'] . '/' . $templateName;
 
-        if ( is_file($full_path) ) {
-            if ($saveForRendering) {
-                $this -> template = file_get_contents($full_path);
-                $this -> template = str_replace('', '', $this -> template);
+        // File not found => search in "Default"
+        if ( !is_file($full_path) ) {
+            if ( $this -> registry -> user_config['skin'] != 'default' ) {
+                $full_path = $this -> registry -> config['templates'] . '/default/' . $templateName;
             }
-            else {
-                return file_get_contents($full_path);
-            }
+        }
+
+        // File not found => raise Error
+        if ( !is_file($full_path) ) {
+            throw new Exception( 'Datei ' . $templateName . ' wurde nicht gefunden!' );
+        }
+
+        if ($saveForRendering) {
+            $this -> template = file_get_contents($full_path);
+            $this -> template = str_replace('', '', $this -> template);
+        }
+        else {
+            return file_get_contents($full_path);
         }
     }
 
