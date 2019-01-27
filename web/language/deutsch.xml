@@ -104,6 +104,23 @@
         <label_playlist>Titel-Liste</label_playlist>
         <table_name>Name</table_name>
         <table_name_title>Name</table_name_title>
+        <label_selectlist>Playlist</label_selectlist>
+        <label_actions>Aktionen</label_actions>
+        <option_actions_select>- Bitte wählen -</option_actions_select>
+        <option_actions_create>neu erstellen</option_actions_create>
+        <option_actions_delete>Liste löschen</option_actions_delete>
+        <option_actions_clear>Liste leeren</option_actions_clear>
+        <label_savename>Speichern als...</label_savename>
+        <placeholder_savename>meine-liste</placeholder_savename>
+        <button_save_playlist>Liste speichern</button_save_playlist>
+        <table_action>A</table_action>
+        <table_action_title>Aktion</table_action_title>
+        <table_position>Pos</table_position>
+        <table_position_title>Position</table_position_title>
+        <table_number>#</table_number>
+        <table_number_title>laufende Nummer</table_number_title>
+        <table_path>Pfad</table_path>
+        <table_path_title>Dateipfad</table_path_title>
     </playlist>
     <mainlog>
     </mainlog>

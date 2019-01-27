@@ -1,3 +1,45 @@
 <div class="col-content">
-
+    <div id="playlist-config" class="">
+        <div class="input-dropdown left-position">
+            <label for="playlist-selector"><lang playlist_label_selectlist /></label>
+            <select id="playlist-selector" name="playlist_selector"><var playlist_existings /></select>
+        </div>
+    </div>
+    <div id="playlist-options" class="">
+        <div class="input-dropdown left-position">
+            <label for="playlist-actions"><lang playlist_label_actions /></label>
+            <select id="playlist-actions" name="playlist_actions">
+                <option value="null"><lang playlist_option_actions_select /></option>
+                <option value="create"><lang playlist_option_actions_create /></option>
+                <option value="delete"><lang playlist_option_actions_delete /></option>
+                <option value="clear"><lang playlist_option_actions_clear /></option>
+            </select>
+        </div>
+        <div class="input-label left-position">
+            <label for="playlist-savename"><lang playlist_label_savename /></label>
+            <input type="text" name="playlist_savename" id="playlist-savename" value="" placeholder="<lang playlist_placeholder_savename />" />
+        </div>
+        <button class="toggle-red" onclick="savePlaylist()"><lang playlist_button_save_playlist /></button>
+    </div>
+    <div id="playlist-content-list" class="table-container white-shadow block-horizontal-spacer">
+        <script type="text/javascript" src="<var_config baseurl />/skin/js/playlistcontent.js"></script>
+        <table id="playlist-table">
+            <colgroup>
+                <col style="width:30px;" />
+                <col style="width:30px;" />
+                <col style="width:30px;" />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th title="<lang playlist_table_action_title />"><lang playlist_table_action /></th>
+                    <th title="<lang playlist_table_position_title />"><lang playlist_table_position /></th>
+                    <th title="<lang playlist_table_number_title />"><lang playlist_table_number /></th>
+                    <th title="<lang playlist_table_path_title />"><lang playlist_table_path /></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 </div>

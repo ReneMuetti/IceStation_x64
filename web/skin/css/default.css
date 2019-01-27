@@ -631,3 +631,22 @@ label#recode-label {
 #directory-table th {
     text-align: left;
 }
+#playlist-config {
+    margin-top: 10px;
+}
+#playlist-config select {
+    width: calc(100% - 118px);
+}
+#playlist-options {
+    margin-bottom: 7px;
+}
+#playlist-options > * {
+    display: inline-block;
+    width: 33%;
+}
+#playlist-options > button {
+    width: auto;
+}
+#playlist-content-list {
+    height: 69.5vh;
+}
