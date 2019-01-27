@@ -81,6 +81,13 @@ class Templater
         }
     }
 
+    public function setTemplateString($string = null)
+    {
+        if ( strlen($string) ) {
+            $this -> template = $string;
+        }
+    }
+
     /**
      * Replate all Variable-Keys in Template
      *

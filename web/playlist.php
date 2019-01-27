@@ -8,8 +8,8 @@ require_once './global.php';
 // #######################################################################
 // ######################## START MAIN SCRIPT ############################
 // #######################################################################
-$renderer = new Templater();
-$listener = new DirectoryLister( $site -> config['multimedia_root'] );
+$renderer  = new Templater();
+$dirlister = new DirectoryLister( $site -> config['multimedia_root'] );
 
 // Navbar
 $renderer -> loadTemplate('navbar.htm');
@@ -28,24 +28,27 @@ $navbar = $renderer -> renderTemplate();
 // left Col (Playlist-Generator-Directory)
 $renderer -> loadTemplate('playlist-directory.htm');
     $renderer -> setVariable('playlist_path'     , '.' . DIRECTORY_SEPARATOR);
-    $renderer -> setVariable('default_dirlisting', $listener -> getCurrentDirectory());
+    $renderer -> setVariable('default_dirlisting', $dirlister -> getCurrentDirectory());
 $left_col = $renderer -> renderTemplate();
 
 // right Col (Playlist-Generator-Content)
 $renderer -> loadTemplate('playlist-content.htm');
+    $renderer -> setVariable('playlist_existings'      , '');
+    $renderer -> setVariable('playlist_corrent_content', '');
 $right_col = $renderer -> renderTemplate();
 
 // Rendering 2-Col-Layout
 $renderer -> loadTemplate('two-col.htm');
-    $renderer -> setVariable('col_left' , $left_col);
-    $renderer -> setVariable('col_right', $right_col);
+    $renderer -> setVariable('col_left'               , $left_col);
+    $renderer -> setVariable('col_right'              , $right_col);
+    $renderer -> setVariable('lang_playlist_file_info', $site -> user_lang['playlist']['file_info']);
+    $renderer -> setVariable('lang_playlist_dir_info' , $site -> user_lang['playlist']['dir_info']);
 $content = $renderer -> renderTemplate();
 
 // Rendering Main-Page
 $renderer -> loadTemplate('page.htm');
     $renderer -> setVariable('page_content', $content);
     $renderer -> setVariable('navbar'      , $navbar);
-    $renderer -> renderDebugOutput($listener);
-    $renderer -> renderDebugOutput($site);
+    $renderer -> renderDebugOutput($renderer);
 print_output($renderer -> renderTemplate());
 ?>

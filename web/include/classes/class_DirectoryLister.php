@@ -82,6 +82,11 @@ class DirectoryLister
 
                 $renderer -> setVariable('file_name', $data['name']);
                 $renderer -> setVariable('file_type', $data['type']);
+                $tempLine = $renderer -> renderTemplate();
+
+                $renderer -> setTemplateString($tempLine);
+                    $renderer -> setVariable('lang_playlist_file_info', output_string($this -> registry -> user_lang['playlist']['file_info'], true) );
+                    $renderer -> setVariable('lang_playlist_dir_info' , output_string($this -> registry -> user_lang['playlist']['dir_info'], true) );
                 $output[] = $renderer -> renderTemplate();
             }
         }
