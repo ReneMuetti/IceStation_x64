@@ -8,8 +8,9 @@ require_once './global.php';
 // #######################################################################
 // ######################## START MAIN SCRIPT ############################
 // #######################################################################
-$renderer  = new Templater();
-$dirlister = new DirectoryLister( $site -> config['multimedia_root'] );
+$renderer   = new Templater();
+$dirlister  = new DirectoryLister( $site -> config['multimedia_root'] );
+$playlister = new PlayLister();
 
 // Navbar
 $renderer -> loadTemplate('navbar.htm');

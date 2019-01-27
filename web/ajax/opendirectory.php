@@ -11,7 +11,7 @@ require_once './global.php';
 // #######################################################################
 $ds = DIRECTORY_SEPARATOR;
 
-$site -> input -> clean_array_gpc('r', array(
+$site -> input -> clean_array_gpc('p', array(
                                      'directory' => TYPE_NOHTML,
                                      'rootdir'   => TYPE_NOHTML
                                  ));
