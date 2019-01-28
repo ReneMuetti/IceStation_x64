@@ -33,6 +33,7 @@ $config['languages'] = $config['base_path'] . '/language';
 
 // Multimedia-Settings
 $config['multimedia_root'] = realpath('/share/Multimedia');
+$config['multimedia_link'] = '/share/Multimedia';
 
 $config['inc_path']   = INC_PATH;
 $config['conf_path']  = CONF_PATH;

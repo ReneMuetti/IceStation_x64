@@ -13,10 +13,15 @@ body {
     font-size: 10px;
 }
 
+.font-zero {
+    font-size:0;
+}
+
+
 /* Buttons */
 button {
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     height: 32px;
     min-width: 110px;
     width: auto;
@@ -39,6 +44,37 @@ button.toggle-yellow:hover {
 button.toggle-red:hover {
     background-position: 0 -102px;
 }
+button.table-file {
+    background-image: url('../images/default/table_playlist_set.png');
+    background-size: 100% 40px;
+    min-width: auto;
+    padding: 0;
+    margin: auto auto;
+    display: block;
+    border-radius: 0;
+}
+button.remove-file {
+    height: 12px;
+    width: 13px;
+    background-position: 0 0;
+}
+button.move-file-up, button.move-file-down {
+    display: inline-block;
+    width: 13px;
+    height: 11px;
+}
+button.move-file-up {
+    margin-left: 5px;
+    margin-right: 5px;
+    background-position: 0 -12px;
+}
+button.move-file-down {
+    margin-left: 0;
+    background-position: 0 -23px;
+}
+button.only-move-down {
+    margin-left: 23px;
+}
 
 /* Table-Container */
 .table-container {
@@ -54,8 +90,8 @@ div.big-tab {
     height: 66px;
     display: inline-block;
     margin-bottom: 12px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     background-image: url('../images/default/bigtab-set.png');
     background-repeat: no-repeat;
     background-size: 100% 205px;

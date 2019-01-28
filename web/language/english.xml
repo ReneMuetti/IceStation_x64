@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <language>
     <global>
+        <option_actions_select>- select -</option_actions_select>
         <ajax_failed>Request failed</ajax_failed>
         <ajax_success>Request success</ajax_success>
         <ajax_no_error>no Errors</ajax_no_error>
@@ -124,6 +125,12 @@
         <table_number_title>serial number</table_number_title>
         <table_path>path</table_path>
         <table_path_title>filepath</table_path_title>
+        <table_remove_file></table_remove_file>
+        <table_remove_file_title>Remove this song from the list</table_remove_file_title>
+        <table_move_file_up></table_move_file_up>
+        <table_move_file_up_title>Move title one position up</table_move_file_up_title>
+        <table_move_file_down></table_move_file_down>
+        <table_move_file_down_title>Move title one position down</table_move_file_down_title>
     </playlist>
     <mainlog>
     </mainlog>

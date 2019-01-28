@@ -1,0 +1,11 @@
+                <tr id="playlist-file-<var current_key />">
+                    <td>
+                        <button class="table-file remove-file" onclick="removeFile('<var current_key />');" title="<lang playlist_table_remove_file_title />"><lang playlist_table_remove_file /></button>
+                    </td>
+                    <td class="font-zero">
+                        <button id="button-moveup-<var current_key />" class="table-file move-file-up" onclick="moveFile('<var current_key />', 'up');" title="<lang playlist_table_move_file_up_title />"><lang playlist_table_move_file_up /></button>
+                        <button id="button-movedown-<var current_key />" class="table-file move-file-down" onclick="moveFile('<var current_key />', 'down');" title="<lang playlist_table_move_file_down_title />"><lang playlist_table_move_file_down /></button>
+                    </td>
+                    <td><var current_position /></td>
+                    <td><var current_file /></td>
+                </tr>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <language>
     <global>
+        <option_actions_select>- Bitte wählen -</option_actions_select>
         <ajax_failed>Anfrage fehlgeschlagen</ajax_failed>
         <ajax_success>Anfrage erfolgreich</ajax_success>
         <ajax_no_error>kein Fehler</ajax_no_error>
@@ -124,6 +125,12 @@
         <table_number_title>laufende Nummer</table_number_title>
         <table_path>Pfad</table_path>
         <table_path_title>Dateipfad</table_path_title>
+        <table_remove_file></table_remove_file>
+        <table_remove_file_title>Titel von der Liste entfernen</table_remove_file_title>
+        <table_move_file_up></table_move_file_up>
+        <table_move_file_up_title>Titel eine Position nach oben schieben</table_move_file_up_title>
+        <table_move_file_down></table_move_file_down>
+        <table_move_file_down_title>Titel eine Position nach unten schieben</table_move_file_down_title>
     </playlist>
     <mainlog>
     </mainlog>

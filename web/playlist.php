@@ -34,22 +34,20 @@ $left_col = $renderer -> renderTemplate();
 
 // right Col (Playlist-Generator-Content)
 $renderer -> loadTemplate('playlist-content.htm');
-    $renderer -> setVariable('playlist_existings'      , '');
-    $renderer -> setVariable('playlist_corrent_content', '');
+    $renderer -> setVariable('playlist_existings'      , $playlister -> getAllPlaylists());
+    $renderer -> setVariable('playlist_corrent_content', $playlister -> getCurrentPlaylistContent());
 $right_col = $renderer -> renderTemplate();
 
 // Rendering 2-Col-Layout
 $renderer -> loadTemplate('two-col.htm');
-    $renderer -> setVariable('col_left'               , $left_col);
-    $renderer -> setVariable('col_right'              , $right_col);
-    $renderer -> setVariable('lang_playlist_file_info', $site -> user_lang['playlist']['file_info']);
-    $renderer -> setVariable('lang_playlist_dir_info' , $site -> user_lang['playlist']['dir_info']);
+    $renderer -> setVariable('col_left' , $left_col);
+    $renderer -> setVariable('col_right', $right_col);
 $content = $renderer -> renderTemplate();
 
 // Rendering Main-Page
 $renderer -> loadTemplate('page.htm');
     $renderer -> setVariable('page_content', $content);
     $renderer -> setVariable('navbar'      , $navbar);
-    $renderer -> renderDebugOutput($renderer);
+    $renderer -> renderDebugOutput($playlister);
 print_output($renderer -> renderTemplate());
 ?>
