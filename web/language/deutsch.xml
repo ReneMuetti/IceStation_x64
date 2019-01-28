@@ -28,6 +28,12 @@
         <ajax_icestation_isocharset_error>- es wurde kein ISO-Zeichensatz angegeben</ajax_icestation_isocharset_error>
         <ajax_icestation_mediaext_error>- es wurden keine Audio-Erweiterungen angegeben (Standard: mp3,ogg,wav)</ajax_icestation_mediaext_error>
         <ajax_change_directory_error>Das Verzeichnis konnte nicht eingelesen werden!</ajax_change_directory_error>
+        <ajax_playlist_switch_file_method_error>- die gewählte Methode ist nicht bekannt</ajax_playlist_switch_file_method_error>
+        <ajax_playlist_switch_file_id_error>- die übermittelte Song-ID ist ungültig</ajax_playlist_switch_file_id_error>
+        <ajax_playlist_file_load_error>die Playlist kann nicht geladen werden oder sie ist leer</ajax_playlist_file_load_error>
+        <ajax_playlist_fileid_error>die übermittelten Song-IDs sind ungültig</ajax_playlist_fileid_error>
+        <ajax_playlist_fileid_out_of_range>die übermittelten Song-IDs befinden sich nicht in der aktuellen Liste</ajax_playlist_fileid_out_of_range>
+        <ajax_playlist_file_could_not_save>die Anpassungen konnten nicht in der aktuellen Playlist gespeichert werden</ajax_playlist_file_could_not_save>
     </global>
     <navbar>
         <configuration>Einstellungen</configuration>

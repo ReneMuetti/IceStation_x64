@@ -13,7 +13,7 @@ function file_read($path)
     // even though the file exists and is readable. http://bugs.php.net/bug.php?id=38308
     if(!file_exists($path) AND !is_uploaded_file($path))
     {
-        return '';
+        return false;
     }
     else
     {
@@ -36,7 +36,7 @@ function file_write($path, $content)
     // even though the file exists and is readable. http://bugs.php.net/bug.php?id=38308
     if( !file_exists($path) )
     {
-        return '';
+        return false;
     }
     else
     {

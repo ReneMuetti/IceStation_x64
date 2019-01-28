@@ -6,6 +6,8 @@ class PlayLister
     private $currList = null;
     private $currFile = null;
 
+    private $currFielePath = null;
+
     public function __construct()
     {
         global $site;
@@ -47,20 +49,12 @@ class PlayLister
 
     public function getCurrentPlaylistContent($selectPlaylist = null)
     {
-        if ( is_null($selectPlaylist) ) {
-            $selectFileName = $this -> currFile;
-        }
-        else {
-            $selectFileName = $this -> _makeSelectFilename($selectPlaylist);
-        }
+        $listContent = $this -> _loadCurrentFile($selectPlaylist);
 
-        $fullFilePath = $this -> registry -> config['config_home'] . '/' . $selectFileName;
-        $renderer     = new Templater();
-
-        if ( is_file($fullFilePath) ) {
-            $listContent = file($fullFilePath);
-            $output      = array();
-            $lastLoad    = false;
+        if ( count($listContent) ) {
+            $renderer = new Templater();
+            $output   = array();
+            $lastLoad = false;
 
             foreach( $listContent AS $key => $value ) {
                 if ( $key == 0 ) {
@@ -85,10 +79,90 @@ class PlayLister
         }
         else {
             // TODO :: ERROR-Message
-            return 'ERROR-Message (' . $fullFilePath . ')';
+            return 'ERROR-Message (' . $selectPlaylist . ')';
         }
     }
 
+    public function switchFile($firstId = 0, $secoundId = 0)
+    {
+        $result      = array('error' => false, 'message' => '');
+        $listContent = $this -> _loadCurrentFile();
+
+        if ( count($listContent) ) {
+            if ( ($firstId >= 0) AND ($secoundId >= 0) AND ($firstId != $secoundId) ) {
+                $countFiles = sizeof($listContent);
+                if ( ($firstId < $countFiles) AND ($secoundId < $countFiles) ) {
+                    $tmp                     = $listContent[$firstId];
+                    $listContent[$firstId]   = $listContent[$secoundId];
+                    $listContent[$secoundId] = $tmp;
+
+                    if ( $this -> _saveCurrentFile() == false ) {
+                        $result['error']   = true;
+                        $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_could_not_save'], false);
+                    }
+                    else {
+                        $result['message'] = array(
+                                                 'first'   => $firstId,
+                                                 'secound' => $secoundId,
+                                                 'file1'   => $this -> _fixedFilePath($listContent[$firstId]),
+                                                 'file2'   => $this -> _fixedFilePath($listContent[$secoundId]),
+                                             );
+                    }
+                }
+                else {
+                    $result['error']   = true;
+                    $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_fileid_out_of_range'], false);
+                }
+            }
+            else {
+                $result['error']   = true;
+                $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_fileid_error'], false);
+            }
+        }
+        else {
+            $result['error']   = true;
+            $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_load_error'], false);
+        }
+
+        return $result;
+    }
+
+
+    private function _saveCurrentFile($fileContent = null)
+    {
+        if ( !is_null($fileContent) ) {
+            if ( is_array($fileContent) ) {
+                $fileContent = implode("\n", $fileContent);
+            }
+
+            $bytesWrite = file_write($this -> currFielePath, $fileContent);
+
+            return $bytesWrite;
+        }
+        else {
+            // TODO :: ERROR-Message
+            return 'Save-Data-Error';
+        }
+    }
+
+    private function _loadCurrentFile($selectPlaylist = null)
+    {
+        if ( is_null($selectPlaylist) ) {
+            $selectFileName = $this -> currFile;
+        }
+        else {
+            $selectFileName = $this -> _makeSelectFilename($selectPlaylist);
+        }
+
+        $this -> currFielePath = $this -> registry -> config['config_home'] . '/' . $selectFileName;
+
+        if ( is_file($this -> currFielePath) ) {
+            return file($this -> currFielePath);
+        }
+        else {
+            return false;
+        }
+    }
 
     private function _getCurrentConfig()
     {
