@@ -1,6 +1,90 @@
 $(document).ready(function(){
 });
 
+function basePlaylistAction()
+{
+    var currAction = $('#playlist-actions').val();
+
+    if( currAction !== 'null') {
+        switch ( currAction ) {
+            case 'create':
+                           break;
+            case 'delete': deleteCurrentPlaylist();
+                           break;
+            case 'clear' : clearCurrentList();
+                           break;
+        }
+    }
+
+    $("#playlist-actions option:selected").prop("selected", false);
+    $("#playlist-actions option:first").prop("selected", "selected");
+}
+
+function deleteCurrentPlaylist()
+{
+    $.ajax({
+        'method': 'POST',
+        'url'   : baseurl + '/ajax_deletecurrentlist.php',
+        'cache' : false,
+        'data'  : {
+            'selectList': $('#playlist-selector').val()
+        },
+        'beforeSend': function() {
+        }
+    })
+    .done(function( data, textStatus, jqXHR ) {
+        var result = $.parseJSON(data);
+
+        if ( result.error == true ) {
+            alert( result.code );
+        }
+        else {
+            // Request success
+
+            if ( result.message.reset == true ) {
+                $('#playlist-table tbody').html('');
+                $('#playlist-selector option:selected').remove();
+
+                // Drop-Down for Playlist reset
+                $("#playlist-selector option:selected").prop("selected", false);
+                $("#playlist-selector option:first").prop("selected", "selected");
+            }
+        }
+    })
+    .fail(function( jqXHR, textStatus ) {
+        alert( str_ajax_failed + ": " + textStatus );
+    });
+}
+
+function clearCurrentList()
+{
+    $.ajax({
+        'method': 'POST',
+        'url'   : baseurl + '/ajax_clearcurrentlist.php',
+        'cache' : false,
+        'data'  : {
+            'selectList': $('#playlist-selector').val()
+        },
+        'beforeSend': function() {
+        }
+    })
+    .done(function( data, textStatus, jqXHR ) {
+        var result = $.parseJSON(data);
+
+        if ( result.error == true ) {
+            alert( result.code );
+        }
+        else {
+            // Request success
+
+            $('#playlist-table tbody').html('');
+        }
+    })
+    .fail(function( jqXHR, textStatus ) {
+        alert( str_ajax_failed + ": " + textStatus );
+    });
+}
+
 function removeFile(fileID)
 {
     $.ajax({

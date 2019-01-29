@@ -7,6 +7,7 @@ class PlayLister
     private $currFile = null;
 
     private $currFilePath = null;
+    private $protectFile  = 'On-The-Go';
 
     public function __construct()
     {
@@ -96,7 +97,7 @@ class PlayLister
                     $listContent[$firstId]   = $listContent[$secoundId];
                     $listContent[$secoundId] = $tmp;
 
-                    if ( $this -> _saveCurrentFile($listContent) == false ) {
+                    if ( $this -> _saveCurrentFile($listContent) === false ) {
                         $result['error']   = true;
                         $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_could_not_save'], false);
                     }
@@ -138,7 +139,7 @@ class PlayLister
                 if ( $fileId < $countFiles ) {
                     unset($listContent[$fileId]);
 
-                    if ( $this -> _saveCurrentFile($listContent) == false ) {
+                    if ( $this -> _saveCurrentFile($listContent) === false ) {
                         $result['error']   = true;
                         $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_could_not_save'], false);
                     }
@@ -160,6 +161,56 @@ class PlayLister
 
         return $result;
     }
+
+    public function clearCurrentPlaylist($selectList = null)
+    {
+        $result      = array('error' => false, 'message' => '');
+        $listContent = $this -> _loadCurrentFile($selectList);
+
+        if ( count($listContent) ) {
+            if ( $this -> _saveCurrentFile('') === false ) {
+                $result['error']   = true;
+                $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_could_not_save'], false);
+            }
+        }
+        else {
+            $result['error']   = true;
+            $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_load_error'], false);
+        }
+
+        return $result;
+    }
+
+    public function deleteCurrentPlaylist($selectList = null)
+    {
+        $result = array('error' => false, 'message' => '', 'reset' => false);
+
+        $fullFilePath = $this -> registry -> config['config_home'] . '/' . $this -> _makeSelectFilename($selectList);
+
+        if ( is_file($fullFilePath) ) {
+            if ( $selectList != $this -> protectFile ) {
+                if ( unlink( $fullFilePath) === false ) {
+                     $result['error']   = true;
+                     $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_could_not_delete'], true);
+                }
+
+                $result['reset'] = true;
+            }
+            else {
+                $result['error']   = true;
+                $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_protected_could_not_delete'], true);
+            }
+        }
+        else {
+            $result['error']   = true;
+            $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_load_error'], false);
+        }
+
+        return $result;
+    }
+
+
+
 
 
     private function _saveCurrentFile($fileContent = null)

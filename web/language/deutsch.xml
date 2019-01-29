@@ -36,6 +36,8 @@
         <ajax_playlist_fileid_out_of_range>die übermittelten Song-IDs befinden sich nicht in der aktuellen Liste</ajax_playlist_fileid_out_of_range>
         <ajax_playlist_file_could_not_save>die Anpassungen konnten nicht in der aktuellen Playlist gespeichert werden</ajax_playlist_file_could_not_save>
         <ajax_playlist_remove_file_id_error>- die übermittelte Song-ID ist ungültig</ajax_playlist_remove_file_id_error>
+        <ajax_playlist_protected_could_not_delete>diese Playlist ist geschützt und kann daher nicht gelöscht werden</ajax_playlist_protected_could_not_delete>
+        <ajax_playlist_could_not_delete>die Playlist konnte nicht gelöscht werden</ajax_playlist_could_not_delete>
     </global>
     <navbar>
         <configuration>Einstellungen</configuration>

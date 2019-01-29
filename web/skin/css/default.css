@@ -76,6 +76,20 @@ button.only-move-down {
     margin-left: 23px;
 }
 
+/* Group-Box */
+.groupbox-left {
+    padding-left: 10px;
+    border-width: 1px 0 1px 1px;
+    border-style: solid;
+    border-color: #ffffff;
+}
+.groupbox-right {
+    padding-left: 10px;
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    border-color: #ffffff;
+}
+
 /* Table-Container */
 .table-container {
     border: 1px solid #000000;
@@ -675,6 +689,7 @@ label#recode-label {
 }
 #playlist-options {
     margin-bottom: 7px;
+    font-size: 0;
 }
 #playlist-options > * {
     display: inline-block;
@@ -685,4 +700,8 @@ label#recode-label {
 }
 #playlist-content-list {
     height: 69.5vh;
+}
+#playlist-create-action {
+    width: 140px;
+    padding: 4.5px 0;
 }

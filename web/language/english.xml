@@ -36,6 +36,8 @@
         <ajax_playlist_fileid_out_of_range>the transmitted song IDs are not in the current list</ajax_playlist_fileid_out_of_range>
         <ajax_playlist_file_could_not_save>the customizations could not be saved in the current playlist</ajax_playlist_file_could_not_save>
         <ajax_playlist_remove_file_id_error>- the transmitted Song-ID is invalid</ajax_playlist_remove_file_id_error>
+        <ajax_playlist_protected_could_not_delete>this playlist is protected and can therefore not be deleted</ajax_playlist_protected_could_not_delete>
+        <ajax_playlist_could_not_delete>the playlist could not be deleted</ajax_playlist_could_not_delete>
     </global>
     <navbar>
         <configuration>Configuration</configuration>
