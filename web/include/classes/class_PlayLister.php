@@ -6,7 +6,7 @@ class PlayLister
     private $currList = null;
     private $currFile = null;
 
-    private $currFielePath = null;
+    private $currFilePath = null;
 
     public function __construct()
     {
@@ -83,10 +83,10 @@ class PlayLister
         }
     }
 
-    public function switchFile($firstId = 0, $secoundId = 0)
+    public function switchFile($firstId = 0, $secoundId = 0, $selectList = null)
     {
         $result      = array('error' => false, 'message' => '');
-        $listContent = $this -> _loadCurrentFile();
+        $listContent = $this -> _loadCurrentFile($selectList);
 
         if ( count($listContent) ) {
             if ( ($firstId >= 0) AND ($secoundId >= 0) AND ($firstId != $secoundId) ) {
@@ -96,7 +96,7 @@ class PlayLister
                     $listContent[$firstId]   = $listContent[$secoundId];
                     $listContent[$secoundId] = $tmp;
 
-                    if ( $this -> _saveCurrentFile() == false ) {
+                    if ( $this -> _saveCurrentFile($listContent) == false ) {
                         $result['error']   = true;
                         $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_could_not_save'], false);
                     }
@@ -127,15 +127,49 @@ class PlayLister
         return $result;
     }
 
+    public function removeFile($fileId = 0, $selectList = null)
+    {
+        $result      = array('error' => false, 'message' => '');
+        $listContent = $this -> _loadCurrentFile($selectList);
+
+        if ( count($listContent) ) {
+            if ( $fileId >= 0 ) {
+                $countFiles = sizeof($listContent);
+                if ( $fileId < $countFiles ) {
+                    unset($listContent[$fileId]);
+
+                    if ( $this -> _saveCurrentFile($listContent) == false ) {
+                        $result['error']   = true;
+                        $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_could_not_save'], false);
+                    }
+                }
+                else {
+                    $result['error']   = true;
+                    $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_fileid_out_of_range'], false);
+                }
+            }
+            else {
+                $result['error']   = true;
+                $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_fileid_error'], false);
+            }
+        }
+        else {
+            $result['error']   = true;
+            $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_file_load_error'], false);
+        }
+
+        return $result;
+    }
+
 
     private function _saveCurrentFile($fileContent = null)
     {
         if ( !is_null($fileContent) ) {
             if ( is_array($fileContent) ) {
-                $fileContent = implode("\n", $fileContent);
+                $fileContent = implode("", $fileContent);
             }
 
-            $bytesWrite = file_write($this -> currFielePath, $fileContent);
+            $bytesWrite = file_write($this -> currFilePath, $fileContent);
 
             return $bytesWrite;
         }
@@ -154,10 +188,10 @@ class PlayLister
             $selectFileName = $this -> _makeSelectFilename($selectPlaylist);
         }
 
-        $this -> currFielePath = $this -> registry -> config['config_home'] . '/' . $selectFileName;
+        $this -> currFilePath = $this -> registry -> config['config_home'] . '/' . $selectFileName;
 
-        if ( is_file($this -> currFielePath) ) {
-            return file($this -> currFielePath);
+        if ( is_file($this -> currFilePath) ) {
+            return file($this -> currFilePath);
         }
         else {
             return false;

@@ -28,12 +28,14 @@
         <ajax_icestation_isocharset_error>- no iso-charset was specified</ajax_icestation_isocharset_error>
         <ajax_icestation_mediaext_error>- no audio extensions were specified (default: mp3,ogg,wav)</ajax_icestation_mediaext_error>
         <ajax_change_directory_error>The directory could not be read!</ajax_change_directory_error>
+        <ajax_playlist_no_list_selected>- no playlist was selected</ajax_playlist_no_list_selected>
         <ajax_playlist_switch_file_method_error>- the chosen method is not known</ajax_playlist_switch_file_method_error>
         <ajax_playlist_switch_file_id_error>- the transmitted Song-ID is invalid</ajax_playlist_switch_file_id_error>
         <ajax_playlist_file_load_error>the playlist cannot be loaded or it is empty</ajax_playlist_file_load_error>
         <ajax_playlist_fileid_error>the transmitted song IDs are invalid</ajax_playlist_fileid_error>
         <ajax_playlist_fileid_out_of_range>the transmitted song IDs are not in the current list</ajax_playlist_fileid_out_of_range>
         <ajax_playlist_file_could_not_save>the customizations could not be saved in the current playlist</ajax_playlist_file_could_not_save>
+        <ajax_playlist_remove_file_id_error>- the transmitted Song-ID is invalid</ajax_playlist_remove_file_id_error>
     </global>
     <navbar>
         <configuration>Configuration</configuration>

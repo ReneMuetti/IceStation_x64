@@ -20,7 +20,7 @@ define ('FUNC_PATH' , $config['base_path'] . '/include/functions' );
 define ('BASE_URL'  , $config['protocol'] . '://' . $config['host'] . dirname($config['script']) );
 define ('CHARSET'   , ini_get('default_charset'));
 define ('SAPI_NAME' , php_sapi_name() );
-define('MIN_LIMIT'  , 1800);
+define ('MIN_LIMIT' , 1800);
 
 /**
  * complete Configuration
