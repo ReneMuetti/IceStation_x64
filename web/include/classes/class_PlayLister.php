@@ -9,6 +9,9 @@ class PlayLister
     private $currFilePath = null;
     private $protectFile  = 'On-The-Go';
 
+    /**
+     * Class Constuctor
+     */
     public function __construct()
     {
         global $site;
@@ -189,12 +192,14 @@ class PlayLister
 
         if ( is_file($fullFilePath) ) {
             if ( $selectList != $this -> protectFile ) {
-                if ( unlink( $fullFilePath) === false ) {
+                $errMsg = unlink($fullFilePath);
+                if ( $errMsg === false ) {
                      $result['error']   = true;
                      $result['message'] = output_string($this -> registry -> user_lang['global']['ajax_playlist_could_not_delete'], true);
                 }
 
                 $result['reset'] = true;
+                $result['message'] = $errMsg;
             }
             else {
                 $result['error']   = true;

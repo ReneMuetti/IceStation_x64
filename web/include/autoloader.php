@@ -6,18 +6,20 @@
  * @param   string       ClassName
  * @return  null|error
  */
-function __autoload($classname)
-{
-    $classname = trim($classname);
-
+spl_autoload_register( function ($classname) {
     if ( !class_exists($classname) AND strlen($classname) ) {
         $_classFile = CLASS_PATH . '/class_' . $classname . '.php';
 
-        require_once $_classFile;
+        if ( is_file( $_classFile ) ) {
+            require_once $_classFile;
+        }
+        else {
+             trigger_error('Faild to load Class "' . $_classFile . '"', E_USER_ERROR);
+        }
     }
     else {
-        trigger_error('Faild to load Class "class_' . $classname . '"', E_USER_ERROR);
+        trigger_error('Empty Class-Name "' . $classname . '"', E_USER_ERROR);
     }
-}
+});
 
 ?>

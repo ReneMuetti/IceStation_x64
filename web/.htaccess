@@ -7,6 +7,12 @@ DirectoryIndex index.php
 ErrorDocument 404 /404.php
 
 ############################################
+## Prevent character encoding issues from server overrides
+## If you still have problems, use the second line instead
+AddDefaultCharset Off
+#AddDefaultCharset UTF-8
+
+############################################
 ## disable directory browsing
 Options All -Indexes
 
@@ -14,6 +20,12 @@ Options All -Indexes
     ############################################
     ## enable rewrites
     RewriteEngine On
+
+    ############################################
+    ## AhrefsBot und SEMrush Spider blocken
+    RewriteCond %{HTTP_USER_AGENT} SemrushBot [OR]
+    RewriteCond %{HTTP_USER_AGENT} AhrefsBot
+    RewriteRule .* - [R=429]
 
     ############################################
     ## Rewirte-Conditions
@@ -26,6 +38,14 @@ Options All -Indexes
 </IfModule>
 
 <IfModule mod_php5.c>
+    ############################################
+    ## Session-Configuration
+    php_value session.gc_probability 1
+    php_value session.gc_divisor 100
+    php_value session.gc_maxlifetime 86400
+</IfModule>
+
+<IfModule mod_php7.c>
     ############################################
     ## Session-Configuration
     php_value session.gc_probability 1

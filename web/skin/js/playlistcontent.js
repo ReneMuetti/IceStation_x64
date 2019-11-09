@@ -7,7 +7,7 @@ function basePlaylistAction()
 
     if( currAction !== 'null') {
         switch ( currAction ) {
-            case 'create':
+            case 'create': createNewPlaylist();
                            break;
             case 'delete': deleteCurrentPlaylist();
                            break;
@@ -18,6 +18,51 @@ function basePlaylistAction()
 
     $("#playlist-actions option:selected").prop("selected", false);
     $("#playlist-actions option:first").prop("selected", "selected");
+}
+
+function getAllCurrentFiles()
+{
+    var currSongs = [];
+    $('#playlist-table tbody td.playlist-file').each(function(){
+        var thisFile = $(this).html();
+        currSongs.push(thisFile);
+    });
+}
+
+function loadSelectedPlaylist()
+{
+    $.ajax({
+        'method': 'POST',
+        'url'   : baseurl + '/ajax_loadselectedlist.php',
+        'cache' : false,
+        'data'  : {
+            'selectList': $('#playlist-selector').val()
+        },
+        'beforeSend': function() {
+            $('#playlist-table tbody').html('');
+        }
+    })
+    .done(function( data, textStatus, jqXHR ) {
+        if ( data.length ) {
+            var result = $.parseJSON(data);
+
+            $('#playlist-table tbody').html(result.message);
+        }
+    })
+    .fail(function( jqXHR, textStatus ) {
+        alert( str_ajax_failed + ": " + textStatus );
+    });
+}
+
+function createNewPlaylist()
+{
+    // Clear Current Playlist
+    $('#playlist-table tbody').html('');
+    $('#playlist-selector option:selected').remove();
+
+    // Drop-Down for Playlist reset
+    $("#playlist-selector option:selected").prop("selected", false);
+    $("#playlist-selector option:first").prop("selected", "selected");
 }
 
 function deleteCurrentPlaylist()

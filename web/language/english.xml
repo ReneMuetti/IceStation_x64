@@ -113,7 +113,7 @@
         <bigtab_playlist>Playlist gemerator</bigtab_playlist>
         <button_jump_next>Jump to next</button_jump_next>
         <label_path>Path</label_path>
-        <tip_directory_list>Choose music file or directory to scan and click blue arrow button. MP3 files will be added to the list “On-The-Go”.</tip_directory_list>
+        <tip_directory_list>Choose music file or directory to scan and click blue arrow button. MP3 files will be added to the list (e.g. "On-The-Go").</tip_directory_list>
         <add_item_to_playlist>Add this element to the current playlist</add_item_to_playlist>
         <label_playlist>Playlist</label_playlist>
         <table_name>Name</table_name>

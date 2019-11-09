@@ -124,7 +124,7 @@ class Input_Cleaner
 	*
 	* @param	Registry	The instance of the Registry object
 	*/
-	function Input_Cleaner(&$registry)
+	function __construct(&$registry)
 	{
 		$this->registry =& $registry;
 
@@ -165,7 +165,14 @@ class Input_Cleaner
 				$this->stripslashes_deep($_FILES);
 			}
 		}
-		@set_magic_quotes_runtime(0);
+
+		if (!function_exists('set_magic_quotes_runtime')) {
+            function set_magic_quotes_runtime($new_setting) {
+                return true;
+            }
+        }
+        set_magic_quotes_runtime(0);
+
 		@ini_set('magic_quotes_sybase', 0);
 
 		foreach (array('_GET', '_POST') AS $arrayname)
